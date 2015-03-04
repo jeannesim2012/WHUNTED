@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>WHUNTED</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        
+        <style type="text/css">
+            #itemImage{
+                position:center;
+                top:40px;
+                right:0;
+                bottom:0;
+                left:0;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div data-role="page">
+
+            <div data-role="panel" id="mypanel" id="myPanel">
+                <!-- panel content goes here -->
+            </div><!-- /panel -->
+
+            <!--Navigation bar in the top container, Header-->
+            <div data-role="header" data-position="fixed">
+                <h1>WHUNTED</h1>
+                <!--Main Navigation Bar-->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active">Wants</a></li>
+                        <li><a href="#">Hunts</a></li>
+                        <li><a href="#">Browse</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <!--Image slider with id=carousel-->
+                <div class="carousel">
+                    <!--First Want on the Wants page-->
+                    <div>
+                        <a href="#"><img id="itemImage" src="image/coach.PNG">
+                            <br>
+                            #Coach #Swagger #Carryall #Lacquer #Rivet #Handbag
+                        </a>
+                    </div>
+                    <!--Second Want on the Wants page-->
+                    <div>
+                        <a href="#"><img id="itemImage" src="image/katespade.PNG">
+                            <br>
+                            #Katespade #Shaw #Street #Rhoda
+                        </a>
+                    </div>
+                    <!--Third Want on the Wants page-->
+                    <div>
+                        <a href="#"><img id="itemImage" src="image/lv.PNG">
+                            <br>
+                            #LouisVuitton #Speedy #Bandouliere #30
+                        </a>
+                    </div>
+                </div>
+            </div><!-- /content -->
+
+            <!--Bottom navigation bar in the bottom container, Footer-->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Wants.html" class="ui-btn-active"><img src="image/icon/house.png"></a></li>
+                        <li><a href="Upload.html"><img src="image/icon/camera.png"></a></li>
+                        <li><a href="Chat.html"><img src="image/icon/envelope.png"></a></li>
+                        <li><a href="Profile.html"><img src="image/icon/profile.png"></a></li>
+                    </ul>
+                </div>
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+
+        <!--Javascript for image slider with id=carousel-->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.carousel').slick();
+            });
+        </script>
+    </body>
+</html>
