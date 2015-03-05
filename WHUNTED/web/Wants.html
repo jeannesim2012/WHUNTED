@@ -6,11 +6,10 @@
         <link rel="stylesheet" href="themes/whunt.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <style type="text/css">
+            /*CSS for thumbnails in list wishes*/
             .has-odd-thumb li a {
                 padding-left: 120px;
             }
@@ -32,21 +31,22 @@
     </head>
     <body>
         <div data-role="page" data-theme="a">
-            <!--Navigation bar in the top container, Header-->
-            <div data-role="header" data-position="fixed">
-                <h6><img src="image/logo/whunted.png"></h6>
+            <!--Navigation bar in the top container, Header is in RED-->
+            <div data-role="header" data-position="fixed" style="background-color: #E74C3C">
+                <!--Logo of Whunted is here-->
+                <h6><img src="image/logo/whunted_white.png"></h6>
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#" class="ui-btn-active">WANTS</a></li>
-                        <li><a href="#">HUNTS</a></li>
-                        <li><a href="#">BROWSE</a></li>
+                        <li><a href="Hunts.html">HUNTS</a></li>
+                        <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
             </div><!-- /header -->
 
-            <!--Content goes here!-->
-            <ul data-role="listview" data-inset="true" class="has-odd-thumb" data-icon="false">
+            <!--List of content wishes goes here! User can also edit ask price-->
+            <ul data-role="listview" data-split-icon="edit" data-split-theme="c" class="has-odd-thumb ui-alt-icon" data-inset="true">
                 <li>
                     <a href="#">
                         <div class="thumbContainer"><img src="image/coach.PNG"></div>
@@ -56,6 +56,7 @@
                         <p>Offered Price: $200</p>
                         <p>Posted: 3 March 2015</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
                 <li><a href="#">
                         <div class="thumbContainer"><img src="image/katespade.PNG"></div>
@@ -65,6 +66,7 @@
                         <p>Offered Price: $180</p>
                         <p>Posted: 28 February 2015</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
                 <li><a href="#">
                         <div class="thumbContainer"><img src="image/lv.PNG"></div>
@@ -74,6 +76,7 @@
                         <p>Offered Price: $370</p>
                         <p>Posted: 1 February 2015</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
                 <li><a href="#">
                         <div class="thumbContainer"><img src="image/ysl.jpg"></div>
@@ -83,6 +86,7 @@
                         <p>Offered Price: $200</p>
                         <p>Posted: 31 January 2015</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
                 <li><a href="#">
                         <div class="thumbContainer"><img src="image/celine.jpg"></div>
@@ -92,6 +96,7 @@
                         <p>Offered Price: $200</p>
                         <p>Posted: 1 January 2015</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
                 <li><a href="#">
                         <div class="thumbContainer"><img src="image/kanken.jpg"></div>
@@ -101,6 +106,7 @@
                         <p>Offered Price: $200</p>
                         <p>Posted: 31 December 2014</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
                 <li><a href="#">
                         <div class="thumbContainer"><img src="image/chanel.jpg"></div>
@@ -110,6 +116,7 @@
                         <p>Offered Price: $200</p>
                         <p>Posted: 10 December 2014</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
                 <li><a href="#">
                         <div class="thumbContainer"><img src="image/hermes.jpg"></div>
@@ -119,9 +126,20 @@
                         <p>Offered Price: $200</p>
                         <p>Posted: 18 November 2014</p>
                     </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
                 </li>
             </ul>
 
+            <!--Popup to edit ask price-->
+            <div data-role="popup" id="edit" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+                <div>
+                    <label for="basic"><center>New Ask Price ($):</center></label>
+                    <input type="number" name="askPrice" id="basic" placeholder="12.34" data-mini="true" />
+                    <!--Need to fix the submit buttons!-->
+                    <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">SUBMIT</a>
+                    <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-delete ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #CF000F; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">CANCEL</a>
+                </div>
+            </div>
             <!--Bottom navigation bar in the bottom container, Footer-->
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
@@ -133,18 +151,6 @@
                     </ul>
                 </div>
             </div><!-- /footer -->
-
         </div><!-- /page -->
-
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="slick/slick.min.js"></script>
-
-        <script type="text/javascript">
-            //Javascript for image slider with id=carousel
-            $(document).ready(function () {
-                $('.carousel').slick();
-            });
-        </script>
     </body>
 </html>
