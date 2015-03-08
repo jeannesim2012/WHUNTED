@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="themes/whunt.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="themes/listview-grid.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <style type="text/css">
@@ -27,6 +28,12 @@
                 max-width: 100px;
                 max-height: 100px;
             }
+
+            @media screen and (orientation: landscape) {
+                .ui-mobile .ui-page {
+                    min-height: 0;
+                }
+            }
         </style>
     </head>
     <body>
@@ -46,92 +53,21 @@
             </div><!-- /header -->
 
             <!--List of content wishes goes here! User can also edit ask price-->
-            <ul data-role="listview" data-split-icon="edit" data-split-theme="c" class="has-odd-thumb ui-alt-icon" data-inset="true">
-                <li>
-                    <a href="#">
-                        <div class="thumbContainer"><img src="image/coach.PNG"></div>
-                        <h3>Coach</h3>
-                        <p>#Coach #Swagger #Carryall #Lacquer #Rivet #Handbag</p>
-                        <p>Asked Price: $-</p>
-                        <p>Offered Price: $200</p>
-                        <p>Posted: 3 March 2015</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-                <li><a href="#">
-                        <div class="thumbContainer"><img src="image/katespade.PNG"></div>
-                        <h3>Katespade</h3>
-                        <p>#Katespade #Shaw #Street #Rhoda</p>
-                        <p>Asked Price: $100</p>
-                        <p>Offered Price: $180</p>
-                        <p>Posted: 28 February 2015</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-                <li><a href="#">
-                        <div class="thumbContainer"><img src="image/lv.PNG"></div>
-                        <h3>LouisVuitton</h3>
-                        <p>#LouisVuitton #Speedy #Bandouliere #30</p>
-                        <p>Asked Price: $380</p>
-                        <p>Offered Price: $370</p>
-                        <p>Posted: 1 February 2015</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-                <li><a href="#">
-                        <div class="thumbContainer"><img src="image/ysl.jpg"></div>
-                        <h3>SaintLaurent</h3>
-                        <p>#SaintLaurent #Small #YSL #Sac #Ligne #Handbag</p>
-                        <p>Asked Price: $200</p>
-                        <p>Offered Price: $200</p>
-                        <p>Posted: 31 January 2015</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-                <li><a href="#">
-                        <div class="thumbContainer"><img src="image/celine.jpg"></div>
-                        <h3>Celine</h3>
-                        <p>#Celine #Mini #Luggage</p>
-                        <p>Asked Price: $200</p>
-                        <p>Offered Price: $200</p>
-                        <p>Posted: 1 January 2015</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-                <li><a href="#">
-                        <div class="thumbContainer"><img src="image/kanken.jpg"></div>
-                        <h3>Fjällräven</h3>
-                        <p>#Fjällräven #Kånken #Mini #Backpack</p>
-                        <p>Asked Price: $200</p>
-                        <p>Offered Price: $200</p>
-                        <p>Posted: 31 December 2014</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-                <li><a href="#">
-                        <div class="thumbContainer"><img src="image/chanel.jpg"></div>
-                        <h3>Chanel</h3>
-                        <p>#Chanel #Large #Jumbo #Classic #Flep #Bag</p>
-                        <p>Asked Price: $200</p>
-                        <p>Offered Price: $200</p>
-                        <p>Posted: 10 December 2014</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-                <li><a href="#">
-                        <div class="thumbContainer"><img src="image/hermes.jpg"></div>
-                        <h3>Hermès</h3>
-                        <p>#Hermès #Medium #Sac #Birkin #30 #Veau #Togo</p>
-                        <p>Asked Price: $200</p>
-                        <p>Offered Price: $200</p>
-                        <p>Posted: 18 November 2014</p>
-                    </a>
-                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
-                </li>
-            </ul>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow">
+                        <img src="image/coach.PNG" class="ui-li-thumb">
+                        <p>$500
+                            <span class="ui-li-count">pending</span></p>
+                    </a><br>
+                </div>
 
+                <div class="ui-block-b">
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow">Second Column Button</a><br>
+                </div>
+            </div>
             <!--Popup to edit ask price-->
-            <div data-role="popup" id="edit" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+            <div data-position="fixed" data-role="popup" id="edit" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
                 <div>
                     <label for="basic"><center>New Ask Price ($):</center></label>
                     <input type="number" name="askPrice" id="basic" placeholder="12.34" data-mini="true" />
@@ -147,10 +83,27 @@
                         <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"><br>UPLOAD</a></li>
                         <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/envelope.png"><br>CHAT</a></li>
                         <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"><br>PROFILE</a></li>
-                        <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/settings.png"><br>SETTINGS</a></li>
+                        <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/bell.png"><br>NOTIFICATIONS</a></li>
                     </ul>
                 </div>
             </div><!-- /footer -->
         </div><!-- /page -->
+
+        <script>
+            $(document).on('pageinit', '#index', function (e, data) {
+                $(document).on('click', '.puppys li a', function () {
+                    handler.image = $(this).find('img').attr('src');
+                    $.mobile.changePage("#image", {transition: "slide", changeHash: false});
+                });
+            });
+
+            $(document).on('pagebeforeshow', '#image', function (e, data) {
+                $.mobile.activePage.find('.show').attr('src', handler.image)
+            });
+
+            var handler = {
+                image: ''
+            }
+        </script>
     </body>
 </html>

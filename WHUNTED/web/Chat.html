@@ -8,6 +8,62 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!--For chat function-->
+        <script src=http://cdn.pubnub.com/pubnub-3.1.min.js></script>
+        <script>
+            chatName = "";
+            $(document).ready(function () {
+
+                PUBNUB.subscribe({
+                    channel: 'chat',
+                    callback: function (text) {
+                        $("#incomingMessages").append("<div class='message'><span class='username'>" + "></span> " + text + "</div>");
+                        $("#incomingMessages").scrollTop($("#incomingMessages")[0].scrollHeight);
+
+                    }
+
+                });
+
+
+                $("#chatNameButton").click(function () {
+                    chatName = $("#chatNameText").val();
+                    if (chatName.length <= 0)
+                        chatName = "unknown";
+
+                    $(location).attr('href', "#chatPage");
+                });
+
+                $("#chatSendButton").click(function () {
+
+                    PUBNUB.publish({
+                        channel: "chat",
+                        message: chatName + " : " + $("#messageText").val()
+                    })
+                    $("#messageText").val("");
+                });
+
+
+            });
+
+        </script>
+        <style>
+            .message
+            {
+                padding: 5px 5px 5px 5px;
+            }
+            .username
+            {
+                font-weight: strong;
+                color: #0f0;
+            }
+            .msgContainerDiv
+            {
+                overflow-y: scroll;
+                height: 250px;
+            }
+        </style>
+        <!--For chat function-->
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -25,11 +81,48 @@
                 </div><!-- /navbar -->
             </div>
             <!--Content-->
-            <div data-role="content">
-                
+            <div id=pubnub pub-key=demo sub-key=demo></div>
+
+            <div data-role="page" id="loginPage" data-role="page" data-theme="a">
+                <div data-role="header">
+                    <h1>Pub Nub Chat</h1>
+                </div>
+
+                <div data-role="content">
+                    <div data-role="fieldcontain">
+                        <label for="chatNameText"><strong>Chat Name:</strong></label>
+                        <input type="text" name="chatNameText" id="chatNameText" value=""  />
+                        <button id="chatNameButton">Ok</button>
+                    </div>
+                </div>
+
+                <div data-role="footer">
+                    <h4>Pub Nub Chat</h4>
+                </div>
             </div>
 
-            <!--Bottom navigation bar in the bottom container, Footer-->
+            <div data-role="page" id="chatPage" data-role="page" data-theme="a">
+
+                <div data-role="header">
+                    <h1>Pub Nub Chat</h1>
+                </div>
+
+                <div data-role="content">
+                    <div id="incomingMessages" name="incomingMessages" class="msgContainerDiv" ></div>
+                    <label for="messageText"><strong>Message:</strong></label>
+                    <textarea name="messageText" id="messageText"></textarea>
+
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a"><a href="#loginPage" id="goBackButton" data-role="button">Go Back</a></div>
+                        <div class="ui-block-b"><button data-theme="a" id="chatSendButton" name="chatSendButton">Send</input>
+                    </fieldset>
+                </div>
+
+                <div data-role="footer">
+                    <h4>Pub Nub Chat</h4>
+                </div>
+            </div>
+                <!--Bottom navigation bar in the bottom container, Footer-->
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
