@@ -18,23 +18,28 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html">WANTS</a></li>
+                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
+                <div data-role="header">
+                    <a href="Wants.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>Amy Ng</h1>
+                </div>
             </div>
+
             <!--Content-->
             <div data-role="content">
+                <center><img src="image/sellers/sellerA.jpg" style="width: 50%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
-                    <!--Upload using camera-->
-                    <b>Image: </b><input type="file" name="image" accept="image/*" data-mini="true" capture>
                     <!--Enter text fields of image-->
-                    <b>Item Name: </b><input type="text" name="itemName" data-mini="true">
-                    <b>Ask Price ($): </b><input type="number" name="price" data-mini="true">
-                    <b>Hashtags: </b><input type="text" name="hashtag" data-mini="true">
-                    <!--Need to fix the submit buttons!-->
-                    <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">SUBMIT</a>
+                    <center>
+                    <p><b>Ratings:</b> <!--INSERT STAR RATING HERE!--> </p>
+                    <p><b>Offer Price: </b> $800</p>
+                    <p><b>Delivery Time: </b> 1 day</p>
+                        <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a>
+                    </center>
                 </form>
             </div>
 
@@ -42,31 +47,12 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" style="font-size: 60%"  class="ui-btn-active"><img src="image/icon/camera.png"><br>UPLOAD</a></li>
+                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"><br>UPLOAD</a></li>
                         <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/envelope.png"><br>CHAT</a></li>
                         <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"><br>PROFILE</a></li>
-                        <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/settings.png"><br>SETTINGS</a></li>
-                    </ul>
+                        <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/bell.png"><br>NOTIFICATIONS</a></li>                    </ul>
                 </div>
             </div><!-- /footer -->
         </div><!-- /page -->
-        
-        <!--script for responsive images in the content-->
-            <script>
-                $(document).on('pageinit', '#index', function (e, data) {
-                    $(document).on('click', '.puppys li a', function () {
-                        handler.image = $(this).find('img').attr('src');
-                        $.mobile.changePage("#image", {transition: "slide", changeHash: false});
-                    });
-                });
-
-                $(document).on('pagebeforeshow', '#image', function (e, data) {
-                    $.mobile.activePage.find('.show').attr('src', handler.image)
-                });
-
-                var handler = {
-                    image: ''
-                }
-            </script>
     </body>
 </html>

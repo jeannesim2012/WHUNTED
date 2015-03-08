@@ -147,8 +147,8 @@ label.ui-btn {
 .ui-btn-icon-top:after,
 .ui-btn-icon-bottom:after,
 .ui-btn-icon-notext:after {
-	background-color: transparent /*{global-icon-color}*/;
-	background-color: transparent /*{global-icon-disc}*/;
+	background-color: #454545 /*{global-icon-color}*/;
+	background-color: #454545 /*{global-icon-disc}*/;
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-border-radius: 1em;
@@ -161,13 +161,13 @@ html .ui-alt-icon.ui-checkbox-off:after,
 html .ui-alt-icon.ui-radio-off:after,
 html .ui-alt-icon .ui-checkbox-off:after,
 html .ui-alt-icon .ui-radio-off:after {
-	background-color: transparent /*{global-icon-color}*/;
-	background-color: transparent /*{global-icon-disc}*/;
+	background-color: #454545 /*{global-icon-color}*/;
+	background-color: #454545 /*{global-icon-disc}*/;
 }
 /* No disc */
 .ui-nodisc-icon.ui-btn:after,
 .ui-nodisc-icon .ui-btn:after {
-	background-color: transparent;
+	background-color: #454545;
 }
 /* Icon shadow */
 .ui-shadow-icon.ui-btn:after,

@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="themes/whunt.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-        <link rel="stylesheet" href="themes/listview-grid.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <style type="text/css">
@@ -73,6 +72,13 @@
                 .puppys li { width: 10%; } 
             } 
             /*******[END] CSS for content with responsive images*******/
+            
+            /*******[START] CSS for search text input*******/
+            .ui-input-search {
+                width: 79%;
+                display: inline-block;
+            }
+            /*******[END] CSS for search text input*******/
         </style>
     </head>
     <body>
@@ -89,46 +95,72 @@
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
+                <div data-role="header">
+                    <div data-role="ui-field-contain">
+                        <input type="search" id="search" placeholder="Search your wants" data-inline="true">
+                        <a href="Wants_Chanel.html" style="float: right;" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-notext" data-inline="true">Search</a>
+                    </div>
+                </div>
+
             </div><!-- /header -->
 
             <!--List of content wishes goes here! User can also edit ask price-->
             <div class="ui-grid-a">
+
                 <div data-role="content" id="content" class="ui-grid-a puppys">
                     <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/chanel.jpg"  alt="chanel" style="width: 90%;"/>
-                            <br>$600
-                            <span class="ui-li-count" style="color: #CF000F; margin-top:-50% ">Completed</span>
+                        <a href="#popupChanel" data-rel="popup" data-position-to="window" data-transition="fade"><img src="image/chanel.jpg"  alt="chanel" style="width: 90%;"/>
+                            <br>Chanel
+                            <span class="ui-li-count" style="color: #26A65B; margin-top:-50%">Pending</span>
                         </a>	
                     </div>
                     <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
                         <a><img src="image/celine.jpg" alt="celine" style="width: 90%;"/>
-                            <br>$700
+                            <br>Celine
                             <span class="ui-li-count" style="color: #26A65B; margin-top:-50%">Pending</span>
                         </a>
                     </div>
-                    <div class="ui-block-a ui-btn ui-corner-all ui-shadow">
+                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
                         <a><img src="image/kanken.jpg" alt="kanken" style="width: 90%;"/>
-                            <br>$800
+                            <br>Fjällräven
                             <span class="ui-li-count" style="color: #ffd800; margin-top:-50%">Confirmation</span>
                         </a>
                     </div>
-                    <div class="ui-block-b ui-btn ui-corner-all ui-shadow">
+                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
                         <a><img src="image/ysl.jpg" alt="ysl" style="width: 90%;"/>
-                            <br>$900
+                            <br>SaintLaurent
+                            <span class="ui-li-count" style="color: #CF000F; margin-top:-50% ">Completed</span>
+                        </a>
+                    </div>
+                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/hermes.jpg" alt="hermes" style="width: 90%;"/>
+                            <br>Hermès
                             <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
                         </a>
                     </div>
-                    <div class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/kanken.jpg" alt="kanken" style="width: 90%;"/>
-                            <br>$800
-                            <span class="ui-li-count" style="color: #ffd800; margin-top:-50%">Confirmation</span>
-                        </a>
-                    </div>
-                    <div class="ui-block-b ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/ysl.jpg" alt="ysl" style="width: 90%;"/>
-                            <br>$900
+                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/burberry.jpg" alt="burberry" style="width: 90%;"/>
+                            <br>Burberry
                             <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
                         </a>
+                    </div>
+
+                    <!--Popups for each images-->
+                    <div data-role="popup" id="popupChanel" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+                        <div data-role="header" data-theme="a">
+                            <h1>Chanel</h1>
+                        </div>
+                        <div role="main" class="ui-content">
+                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" style="margin-top:1%">Close</a>
+                            <p>#Chanel #Large #Jumbo #Classic #Flep #Bag</p>
+                            <p>Ask Price: $1000</p>
+                            <p>Offered Price: $1000</p>
+                            <ul>
+                                <a href="Wants_Edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
+                                <a href="ViewSellers.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/sellers.png"></a>
+                                <a href="Wants_deleted.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/delete.png"></a>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -142,7 +174,7 @@
                             <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/bell.png"><br>NOTIFICATIONS</a></li>
                         </ul>
                     </div>
-                </div><!-- /footer -->
+                </div><!-- /footer -->           
             </div><!-- /page -->
 
             <!--script for responsive images in the content-->

@@ -31,7 +31,7 @@
                     <b>Image: </b><input type="file" name="image" accept="image/*" data-mini="true" capture>
                     <!--Enter text fields of image-->
                     <b>Item Name: </b><input type="text" name="itemName" data-mini="true">
-                    <b>My Ask ($): </b><input type="number" name="price" data-mini="true">
+                    <b>Ask Price ($): </b><input type="number" name="price" data-mini="true">
                     <b>Hashtags: </b><input type="text" name="hashtag" data-mini="true">
                     <!--Need to fix the submit buttons!-->
                     <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">SUBMIT</a>
@@ -50,5 +50,23 @@
                 </div>
             </div><!-- /footer -->
         </div><!-- /page -->
+        
+        <!--script for responsive images in the content-->
+            <script>
+                $(document).on('pageinit', '#index', function (e, data) {
+                    $(document).on('click', '.puppys li a', function () {
+                        handler.image = $(this).find('img').attr('src');
+                        $.mobile.changePage("#image", {transition: "slide", changeHash: false});
+                    });
+                });
+
+                $(document).on('pagebeforeshow', '#image', function (e, data) {
+                    $.mobile.activePage.find('.show').attr('src', handler.image)
+                });
+
+                var handler = {
+                    image: ''
+                }
+            </script>
     </body>
 </html>
