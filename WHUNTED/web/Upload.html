@@ -50,23 +50,5 @@
                 </div>
             </div><!-- /footer -->
         </div><!-- /page -->
-        
-        <!--script for responsive images in the content-->
-            <script>
-                $(document).on('pageinit', '#index', function (e, data) {
-                    $(document).on('click', '.puppys li a', function () {
-                        handler.image = $(this).find('img').attr('src');
-                        $.mobile.changePage("#image", {transition: "slide", changeHash: false});
-                    });
-                });
-
-                $(document).on('pagebeforeshow', '#image', function (e, data) {
-                    $.mobile.activePage.find('.show').attr('src', handler.image)
-                });
-
-                var handler = {
-                    image: ''
-                }
-            </script>
     </body>
 </html>
