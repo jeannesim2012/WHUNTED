@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WHUNTED</title>
+        <link rel="stylesheet" href="themes/whunt.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <style type="text/css">
+            /*CSS for thumbnails in list wishes*/
+            .has-odd-thumb li a {
+                padding-left: 120px;
+            }
+            .thumbContainer {
+                padding-left: 10px;
+                position: absolute;
+                left: 0; top: 0; bottom: 0;
+                width: 80px;
+            }
+            .thumbContainer img {
+                padding-left: 10px;
+                position: absolute;
+                margin: auto;
+                bottom: 0; left: 0; top: 0; right: 0;
+                max-width: 100px;
+                max-height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
+            <!--Navigation bar in the top container, Header is in RED-->
+            <div data-role="header" data-position="fixed" style="background-color: #E74C3C">
+                <!--Logo of Whunted is here-->
+                <h6><img src="image/logo/whunted_white.png"></h6>
+                <!--Main Navigation Bar-->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Hunts.html">HUNTS</a></li>
+                        <li><a href="#">BROWSE</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /header -->
+
+            <!--List of content wishes goes here! User can also edit ask price-->
+            <ul data-role="listview" data-split-icon="edit" data-split-theme="c" class="has-odd-thumb ui-alt-icon" data-inset="true">
+                <li>
+                    <a href="#">
+                        <div class="thumbContainer"><img src="image/coach.PNG"></div>
+                        <h3>Coach</h3>
+                        <p>#Coach #Swagger #Carryall #Lacquer #Rivet #Handbag</p>
+                        <p>Asked Price: $-</p>
+                        <p>Offered Price: $200</p>
+                        <p>Posted: 3 March 2015</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+                <li><a href="#">
+                        <div class="thumbContainer"><img src="image/katespade.PNG"></div>
+                        <h3>Katespade</h3>
+                        <p>#Katespade #Shaw #Street #Rhoda</p>
+                        <p>Asked Price: $100</p>
+                        <p>Offered Price: $180</p>
+                        <p>Posted: 28 February 2015</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+                <li><a href="#">
+                        <div class="thumbContainer"><img src="image/lv.PNG"></div>
+                        <h3>LouisVuitton</h3>
+                        <p>#LouisVuitton #Speedy #Bandouliere #30</p>
+                        <p>Asked Price: $380</p>
+                        <p>Offered Price: $370</p>
+                        <p>Posted: 1 February 2015</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+                <li><a href="#">
+                        <div class="thumbContainer"><img src="image/ysl.jpg"></div>
+                        <h3>SaintLaurent</h3>
+                        <p>#SaintLaurent #Small #YSL #Sac #Ligne #Handbag</p>
+                        <p>Asked Price: $200</p>
+                        <p>Offered Price: $200</p>
+                        <p>Posted: 31 January 2015</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+                <li><a href="#">
+                        <div class="thumbContainer"><img src="image/celine.jpg"></div>
+                        <h3>Celine</h3>
+                        <p>#Celine #Mini #Luggage</p>
+                        <p>Asked Price: $200</p>
+                        <p>Offered Price: $200</p>
+                        <p>Posted: 1 January 2015</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+                <li><a href="#">
+                        <div class="thumbContainer"><img src="image/kanken.jpg"></div>
+                        <h3>Fjällräven</h3>
+                        <p>#Fjällräven #Kånken #Mini #Backpack</p>
+                        <p>Asked Price: $200</p>
+                        <p>Offered Price: $200</p>
+                        <p>Posted: 31 December 2014</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+                <li><a href="#">
+                        <div class="thumbContainer"><img src="image/chanel.jpg"></div>
+                        <h3>Chanel</h3>
+                        <p>#Chanel #Large #Jumbo #Classic #Flep #Bag</p>
+                        <p>Asked Price: $200</p>
+                        <p>Offered Price: $200</p>
+                        <p>Posted: 10 December 2014</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+                <li><a href="#">
+                        <div class="thumbContainer"><img src="image/hermes.jpg"></div>
+                        <h3>Hermès</h3>
+                        <p>#Hermès #Medium #Sac #Birkin #30 #Veau #Togo</p>
+                        <p>Asked Price: $200</p>
+                        <p>Offered Price: $200</p>
+                        <p>Posted: 18 November 2014</p>
+                    </a>
+                    <a href="#edit" data-rel="popup" data-position-to="window" data-transition="pop">Edit ask price</a>
+                </li>
+            </ul>
+
+            <!--Popup to edit ask price-->
+            <div data-role="popup" id="edit" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+                <div>
+                    <label for="basic"><center>New Ask Price ($):</center></label>
+                    <input type="number" name="askPrice" id="basic" placeholder="12.34" data-mini="true" />
+                    <!--Need to fix the submit buttons!-->
+                    <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">SUBMIT</a>
+                    <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-delete ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #CF000F; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">CANCEL</a>
+                </div>
+            </div>
+            <!--Bottom navigation bar in the bottom container, Footer-->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"><br>UPLOAD</a></li>
+                        <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/envelope.png"><br>CHAT</a></li>
+                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"><br>PROFILE</a></li>
+                        <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/settings.png"><br>SETTINGS</a></li>
+                    </ul>
+                </div>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+    </body>
+</html>
