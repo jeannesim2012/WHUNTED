@@ -10,30 +10,69 @@
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <style type="text/css">
-            /*CSS for thumbnails in list wishes*/
-            .has-odd-thumb li a {
-                padding-left: 120px;
-            }
-            .thumbContainer {
-                padding-left: 10px;
-                position: absolute;
-                left: 0; top: 0; bottom: 0;
-                width: 80px;
-            }
-            .thumbContainer img {
-                padding-left: 10px;
-                position: absolute;
-                margin: auto;
-                bottom: 0; left: 0; top: 0; right: 0;
-                max-width: 100px;
-                max-height: 100px;
+            /*******[START] CSS for content with responsive images*******/
+            .ui-content {
+                padding: 5px !important; 
+                margin: 0 !important;
             }
 
-            @media screen and (orientation: landscape) {
-                .ui-mobile .ui-page {
-                    min-height: 0;
-                }
+            .puppys { 
+                padding: 0; 
+                margin: 0; 
+                list-style: none;     
             }
+
+            .puppys li { 
+                float: left; 
+                width: 50%; 
+            }
+
+            .puppys li a { 
+                display: block; 
+                margin: 5px; 
+            }
+
+            .puppys li a img, .show { 
+                display: block; 
+                width: 100%; 
+                height: auto; 
+            }
+
+            /* 0 - 480px */ 
+            @media all and (min-width: 480px){ 	
+                .puppys li { width: 33.33333333%; } 	
+            } 		
+
+            /* 481px - 768px */ 
+            @media only screen and (min-width: 768px) {     
+                .puppys li { width: 20%; } 
+            }  
+
+            /* 769px - 1024px */ 
+            @media only screen and (min-width: 1024px) {     
+                .puppys li { width: 16.66666666%; }  	
+            }  
+
+            /* 1025px - 1280px */ 
+            @media only screen and (min-width: 1280px) {     
+                .puppys li { width: 14.285714%; } 
+            }  
+
+            /* 1281px - 1440 */ 
+            @media only screen and (min-width: 1440px) {     
+                .puppys li { width: 12.5%; } 
+            }  
+
+            /* 1441px - 1600px */ 
+            @media only screen and (min-width: 1600px) {     
+                .puppys li { width: 11.111111%; } 
+            }  
+
+            /* 1601px - 1920px */ 
+            @media only screen and (min-width: 1920px) {     
+                .puppys li { width: 10%; } 
+            } 
+            /*******[END] CSS for content with responsive images*******/
         </style>
     </head>
     <body>
@@ -54,56 +93,74 @@
 
             <!--List of content wishes goes here! User can also edit ask price-->
             <div class="ui-grid-a">
-                <div class="ui-block-a">
-                    <a href="#" class="ui-btn ui-corner-all ui-shadow">
-                        <img src="image/coach.PNG" class="ui-li-thumb">
-                        <p>$500
-                            <span class="ui-li-count">pending</span></p>
-                    </a><br>
+                <div data-role="content" id="content" class="ui-grid-a puppys">
+                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/chanel.jpg"  alt="chanel" style="width: 90%;"/>
+                            <br>$600
+                            <span class="ui-li-count" style="color: #CF000F; margin-top:-50% ">Completed</span>
+                        </a>	
+                    </div>
+                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/celine.jpg" alt="celine" style="width: 90%;"/>
+                            <br>$700
+                            <span class="ui-li-count" style="color: #26A65B; margin-top:-50%">Pending</span>
+                        </a>
+                    </div>
+                    <div class="ui-block-a ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/kanken.jpg" alt="kanken" style="width: 90%;"/>
+                            <br>$800
+                            <span class="ui-li-count" style="color: #ffd800; margin-top:-50%">Confirmation</span>
+                        </a>
+                    </div>
+                    <div class="ui-block-b ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/ysl.jpg" alt="ysl" style="width: 90%;"/>
+                            <br>$900
+                            <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
+                        </a>
+                    </div>
+                    <div class="ui-block-a ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/kanken.jpg" alt="kanken" style="width: 90%;"/>
+                            <br>$800
+                            <span class="ui-li-count" style="color: #ffd800; margin-top:-50%">Confirmation</span>
+                        </a>
+                    </div>
+                    <div class="ui-block-b ui-btn ui-corner-all ui-shadow">
+                        <a><img src="image/ysl.jpg" alt="ysl" style="width: 90%;"/>
+                            <br>$900
+                            <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="ui-block-b">
-                    <a href="#" class="ui-btn ui-corner-all ui-shadow">Second Column Button</a><br>
-                </div>
-            </div>
-            <!--Popup to edit ask price-->
-            <div data-position="fixed" data-role="popup" id="edit" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
-                <div>
-                    <label for="basic"><center>New Ask Price ($):</center></label>
-                    <input type="number" name="askPrice" id="basic" placeholder="12.34" data-mini="true" />
-                    <!--Need to fix the submit buttons!-->
-                    <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">SUBMIT</a>
-                    <a href="Wants.html" data-rel="back" class="ui-btn ui-btn-w ui-icon-delete ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #CF000F; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">CANCEL</a>
-                </div>
-            </div>
-            <!--Bottom navigation bar in the bottom container, Footer-->
-            <div data-role="footer" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"><br>UPLOAD</a></li>
-                        <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/envelope.png"><br>CHAT</a></li>
-                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"><br>PROFILE</a></li>
-                        <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/bell.png"><br>NOTIFICATIONS</a></li>
-                    </ul>
-                </div>
-            </div><!-- /footer -->
-        </div><!-- /page -->
+                <!--Bottom navigation bar in the bottom container, Footer-->
+                <div data-role="footer" data-position="fixed">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"><br>UPLOAD</a></li>
+                            <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/envelope.png"><br>CHAT</a></li>
+                            <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"><br>PROFILE</a></li>
+                            <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/bell.png"><br>NOTIFICATIONS</a></li>
+                        </ul>
+                    </div>
+                </div><!-- /footer -->
+            </div><!-- /page -->
 
-        <script>
-            $(document).on('pageinit', '#index', function (e, data) {
-                $(document).on('click', '.puppys li a', function () {
-                    handler.image = $(this).find('img').attr('src');
-                    $.mobile.changePage("#image", {transition: "slide", changeHash: false});
+            <!--script for responsive images in the content-->
+            <script>
+                $(document).on('pageinit', '#index', function (e, data) {
+                    $(document).on('click', '.puppys li a', function () {
+                        handler.image = $(this).find('img').attr('src');
+                        $.mobile.changePage("#image", {transition: "slide", changeHash: false});
+                    });
                 });
-            });
 
-            $(document).on('pagebeforeshow', '#image', function (e, data) {
-                $.mobile.activePage.find('.show').attr('src', handler.image)
-            });
+                $(document).on('pagebeforeshow', '#image', function (e, data) {
+                    $.mobile.activePage.find('.show').attr('src', handler.image)
+                });
 
-            var handler = {
-                image: ''
-            }
-        </script>
+                var handler = {
+                    image: ''
+                }
+            </script>
     </body>
 </html>

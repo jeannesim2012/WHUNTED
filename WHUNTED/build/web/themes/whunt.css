@@ -101,6 +101,7 @@ label.ui-btn {
 .ui-li-count {
 	-webkit-border-radius: 0.0em /*{global-radii-buttons}*/;
 	border-radius: 0.0em /*{global-radii-buttons}*/;
+        color: #505050;
 }
 /* Icon-only buttons */
 .ui-btn-icon-notext.ui-btn-corner-all,
