@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- Star Rating -->
+        <script src="star-rating/jquery.rating.pack.js"></script>
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -25,7 +29,7 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
@@ -41,23 +45,35 @@
             <div data-role="content">
                 <ul data-role="listview" data-inset="true">
                     <li><a href="ViewSellers_SellerA.html">
-                            <img src="image/sellers/sellerA.jpg">
-                            <h3>Amy Ng</h3>
-                            <!--INSERT STAR RATING HERE!-->
+                            <img src="image/sellers/sellerA.jpg" >
+                            <b>Amy Ng</b>
+                            <p><input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/></p>
                             <p>Offer Price: $800</p>
                             <p>Delivery Time: 1 day</p></a>
                     </li>
                     <li><a href="#">
                             <img src="image/sellers/sellerB.jpg">
-                            <h3>Ben Ng</h3>
-                            <!--INSERT STAR RATING HERE!-->
+                            <b>Ben Ng</b>
+                            <p><input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled"/></p>
                             <p>Offer Price: $900</p>
                             <p>Delivery Time: 1 week</p></a>
                     </li>
                     <li><a href="#">
                             <img src="image/sellers/sellerC.jpg">
-                            <h3>Clara Ng</h3>
-                            <!--INSERT STAR RATING HERE!-->
+                            <b>Clara Ng</b>
+                            <p><input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                                <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star3" type="radio" class="star" disabled="disabled"/></p>
                             <p>Offer Price: $950</p>
                             <p>Delivery Time: 1 month</p></a>
                     </li>

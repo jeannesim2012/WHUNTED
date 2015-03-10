@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- Star Rating -->
+        <script src="star-rating/jquery.rating.pack.js"></script>
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -25,30 +30,41 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
-                        <li><a href="Browse.html">BROWSE</a></li>
+                        <li><a href="Browse.html" class="ui-btn-active">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="Wants.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>VIEW ITEM</h1>
+                    <a href="Browse.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>View Buyer</h1>
                 </div>
             </div>
+
             <!--Content-->
             <div data-role="content">
-
-                <center><img src="image/chanel.jpg" style="width: 50%;"></center>
+                <center><img src="image/celine.jpg" style="width: 50%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
-                    <p><b>Item Name:</b> Chanel </p>
-                    <p><b>Ask Price ($): </b> $1000 </p>
-                    <p><b>Hashtags: </b> #Chanel #Large #Jumbo #Classic #Flep #Bag</p>
-                    <center>
-                        <a href="Wants_Edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
-                        <a href="ViewSellers.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/sellers.png"></a>
-                        <a href="Wants_deleted.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/delete.png"></a>
-                    </center>
+                    <table cellspacing="4" align="center">
+                        <tr>
+                            <td><b>Ratings:</b></td>
+                            <td><input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star" checked="checked"/> 
+                                <input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star"/></td>
+                        </tr>
+                        <tr>
+                            <td><b>Offer Price:</b></td>
+                            <td>$800</td>
+                        </tr>
+                        <tr>
+                            <td><b>Delivery Time:</b></td>
+                            <td>1 day</td>
+                        </tr>
+                    </table>
+                    <center><a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a></center>
                 </form>
             </div>
 
@@ -57,7 +73,7 @@
                 <div data-role="navbar">
                     <ul>
                         <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
-                        <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/envelope.png"></a></li>
+                        <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/chat.png"></a></li>
                         <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
                         <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
                     </ul>
