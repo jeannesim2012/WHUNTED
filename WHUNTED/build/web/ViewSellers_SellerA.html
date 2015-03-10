@@ -17,9 +17,16 @@
     <body>
         <div data-role="page" data-theme="a">
             <!--Navigation bar in the top container, Header is in RED-->
-            <div data-role="header" data-position="fixed" style="background-color: #E74C3C">
+            <div data-role="header" data-position="fixed">
                 <!--Logo of Whunted is here-->
-                <h6><img src="image/logo/whunted_white.png"></h6>
+                <div data-role="header" style="background-color: #E74C3C">
+                    <table cellspacing="4" align="center" width="100%">
+                        <tr>
+                            <td width="90%" align="center" style="padding-left: 10%;"><img src="image/logo/whunted_white.png"></td>
+                            <td width="10%"><a href="Login.html"><img src="image/icon/logout_v2.png"></a></td>
+                        </tr>
+                    </table>
+                </div>
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
@@ -39,16 +46,25 @@
                 <center><img src="image/sellers/sellerA.jpg" style="width: 50%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
-                        <p><b>Ratings:</b>
-                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled"/>
-                        </p><br>
-                        <p><b>Offer Price: </b> $800</p>
-                        <p><b>Delivery Time: </b> 1 day</p>
-                        <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a>
+                    <table cellspacing="4" align="center">
+                        <tr>
+                            <td><b>Ratings:</b></td>
+                            <td><input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star" checked="checked"/> 
+                                <input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star"/></td>
+                        </tr>
+                        <tr>
+                            <td><b>Offer Price:</b></td>
+                            <td>$800</td>
+                        </tr>
+                        <tr>
+                            <td><b>Delivery Time:</b></td>
+                            <td>1 day</td>
+                        </tr>
+                    </table>
+                    <center><a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a></center>
                 </form>
             </div>
 

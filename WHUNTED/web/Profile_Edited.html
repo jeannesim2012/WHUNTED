@@ -14,7 +14,14 @@
             <!--Navigation bar in the top container, Header is in RED-->
             <div data-role="header" data-position="fixed" style="background-color: #E74C3C">
                 <!--Logo of Whunted is here-->
-                <h6><img src="image/logo/whunted_white.png"></h6>
+                <div data-role="header" style="background-color: #E74C3C">
+                    <table cellspacing="4" align="center" width="100%">
+                        <tr>
+                            <td width="90%" align="center" style="padding-left: 10%;"><img src="image/logo/whunted_white.png"></td>
+                            <td width="10%"><a href="Login.html"><img src="image/icon/logout_v2.png"></a></td>
+                        </tr>
+                    </table>
+                </div>
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
@@ -30,14 +37,14 @@
             <!--Content-->
             <div data-role="content">
 
-                <center><img src="image/sellers/bob3.jpg" style="width: 50%;"></center>
+                <center><img src="image/sellers/bob3.jpg" style="width: 80%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
                     <p><b>Name:</b> Bieber Ng </p>
                     <p><b>Email: </b> bieber.ng.2015@smu.edu.sg </p>
                     <p><b>Contact Number: </b> 8765 4321</p>
                     <center>
-                        <a href="Profile_Edit_v2.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
+                        <a href="Profile_Edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
                     </center>
                 </form>
             </div>
