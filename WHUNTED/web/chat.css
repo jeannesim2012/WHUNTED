@@ -20,7 +20,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    font: Futura, 'Trebuchet MS', Arial, sans-serif;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -48,14 +48,15 @@ table {
     border-spacing: 0;
 }
 #content {
-    border: 1px solid #A9F5A9;
+    border: 1px solid #cfcfd0;
     background: #FFF;
     margin-left: auto;
     margin-right: auto;
-    width: 350px;
+    width: 100%;
     height: 300px;
     overflow: auto;
     -moz-border-radius: 3px;
+    font-size: 13px;
 }
 #content p{
     padding: 1em;
@@ -64,29 +65,20 @@ table {
     border: 1px solid #BDBDBD;
     -moz-border-radius: 4px;
     
-    max-width: 150px;
+    max-width: 100%;
     float: left;
 }
 
 #content img{
-    margin: 1em;
+    margin: 0.5em;
     float: left;
-}
-
-h1 {
-    color: #01DF3A;
-    font-family: 'Merienda One', cursive;
-    margin-top: 20px;
-    text-align: center;
-    padding: 1em;
-    font-size: 31px;
 }
 
 #message {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
+    width: 100%;
     overflow: auto;
     padding: 0 0 0 3px;
     color: #000000;
@@ -97,8 +89,10 @@ h1 {
 }
 
 #message textarea {
-    border: 1px solid #A9F5A9;
-    font-family: Tahoma, sans-serif;
+    border: 1px solid #cfcfd0;
+    background: #FFF;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+    font-size: 13px;
 }
 
 button {
@@ -110,5 +104,6 @@ button {
     color: white;
     -moz-box-shadow: 0 1px 0 white;
     cursor: pointer;
+    width: 100%;
 }
 

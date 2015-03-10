@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- Star Rating -->
+        <script src="star-rating/jquery.rating.pack.js"></script>
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -34,12 +39,16 @@
                 <center><img src="image/sellers/sellerA.jpg" style="width: 50%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
-                    <center>
-                    <p><b>Ratings:</b> <!--INSERT STAR RATING HERE!--> </p>
-                    <p><b>Offer Price: </b> $800</p>
-                    <p><b>Delivery Time: </b> 1 day</p>
+                        <p><b>Ratings:</b>
+                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                            <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                            <input name="star3" type="radio" class="star" disabled="disabled"/>
+                        </p><br>
+                        <p><b>Offer Price: </b> $800</p>
+                        <p><b>Delivery Time: </b> 1 day</p>
                         <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a>
-                    </center>
                 </form>
             </div>
 
@@ -47,10 +56,11 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"><br>UPLOAD</a></li>
-                        <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/envelope.png"><br>CHAT</a></li>
-                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"><br>PROFILE</a></li>
-                        <li><a href="Settings.html" style="font-size: 60%"><img src="image/icon/bell.png"><br>NOTIFICATIONS</a></li>                    </ul>
+                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
+                        <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/chat.png"></a></li>
+                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
+                        <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                    </ul>
                 </div>
             </div><!-- /footer -->
         </div><!-- /page -->

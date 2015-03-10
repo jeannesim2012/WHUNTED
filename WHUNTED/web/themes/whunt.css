@@ -349,7 +349,7 @@ html .ui-bar-a .ui-slider-track .ui-btn-active,
 html .ui-body-a .ui-slider-track .ui-btn-active,
 html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
 html body div.ui-slider-track.ui-body-a .ui-btn-active {
-	background-color: #efeff0 /*{a-active-background-color}*/;
+	background-color: #696969 /*{a-active-background-color}*/;
 	border-color: #cfcfd0 /*{a-active-border}*/;
 	color: #333333 /*{a-active-color}*/;
 	text-shadow: 0 /*{a-active-shadow-x}*/ 0px /*{a-active-shadow-y}*/ 0 /*{a-active-shadow-radius}*/ #696969 /*{a-active-shadow-color}*/;

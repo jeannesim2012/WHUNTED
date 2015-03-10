@@ -8,11 +8,6 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-        <!-- Star Rating -->
-        <script src="star-rating/jquery.rating.pack.js"></script>
-        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
-
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -23,32 +18,28 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="ViewSellers.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>Amy Ng</h1>
+                    <a href="Profile.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>EDIT PROFILE</h1>
                 </div>
             </div>
-
             <!--Content-->
             <div data-role="content">
-                <center><img src="image/sellers/sellerA.jpg" style="width: 50%;"></center>
+
+                <center><img src="image/sellers/bob2.jpg" style="width: 70%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
-                        <p><b>Ratings:</b>
-                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star3" type="radio" class="star" disabled="disabled"/>
-                        </p><br>
-                        <p><b>Offer Price: </b> $800</p>
-                        <p><b>Delivery Time: </b> 1 day</p>
-                        <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a>
+                    <p><b>Name:</b> <input type="text" data-mini="true"/>
+                    <p><b>Email: </b> <input type="email" data-mini="true"/>
+                    <p><b>Contact Number: </b> <input type="number" data-mini="true"/>
+                    <center>
+                        <a href="Profile.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
+                    </center>
                 </form>
             </div>
 
@@ -58,7 +49,7 @@
                     <ul>
                         <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
                         <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/chat.png"></a></li>
-                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
+                        <li><a href="Profile.html" style="font-size: 60%" class="ui-btn-active"><img src="image/icon/profile.png"></a></li>
                         <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
                     </ul>
                 </div>
