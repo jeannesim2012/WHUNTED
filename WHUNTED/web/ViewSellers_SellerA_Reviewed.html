@@ -13,6 +13,7 @@
         <script src="star-rating/jquery.rating.pack.js"></script>
         <link rel="stylesheet" href="star-rating/jquery.rating.css" />
 
+
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -30,37 +31,80 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants_page3.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="ViewSellers.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>Amy Ng</h1>
+                    <h1>Justin</h1>
                 </div>
             </div>
 
             <!--Content-->
             <div data-role="content">
-                <center><img src="image/sellers/sellerA.jpg" style="width: 50%;"></center>
-                <form action="server.cgi" method="post" enctype="multipart/form-data">
-                    <!--Enter text fields of image-->
-                    <table cellspacing="4" align="center">
-                        <tr>
-                            <td><b style="font-size:80%;">Ratings:</b></td>
-                            <td><input name="star3" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star3" type="radio" class="star" disabled="disabled" checked="checked" checked="checked"/></td>
-                        </tr>
-                        <tr>
-                            <td><b style="font-size:80%;">Review:</b></td>
-                            <td><p style="font-size:80%;">Replies to enquiries promptly and delivers goods of expected quality.</p></td>
-                        </tr>
-                    </table>
-                </form>
+                <center><img src="image/sellers/sellerB.jpg" style="width: 50%;"></center>
+                <!--Enter text fields of image-->
+                <table cellspacing="4" align="center">
+                    <tr>
+                        <td><b style="font-size:80%;">Ratings:</b></td>
+                        <td><input name="star1" type="radio" class="star" disabled="disabled"/> 
+                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                            <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/></td>
+                    </tr>
+                    <tr>
+                        <td><b style="font-size:80%;">Offer Price:</b></td>
+                        <td><p style="font-size:80%;">$800</p></td>
+                    </tr>
+                    <tr>
+                        <td><b style="font-size:80%;">Delivery Time:</b></td>
+                        <td><p style="font-size:80%;">1 day</p></td>
+                    </tr>
+                </table>
+
+                <div data-role="content">
+                    <h4>REVIEWS FROM SELLERS</h4>
+                    <ul data-role="listview" data-icon="false">
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/bob.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;"><i>"Responsible"</i></td>
+                                        <td width="40%">
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a></li>
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/alice.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;"><i>"Trustworthy"</i></td>
+                                        <td width="40%">
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a></li>
+                    </ul>
+                </div>
+                <center>
+                    <a href="ViewSellers.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/sellers.png"></a>
+                    <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a>
+                    <a href="Review.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/rate.png"></a>
+                </center>
+
             </div>
 
             <!--Bottom navigation bar in the bottom container, Footer-->

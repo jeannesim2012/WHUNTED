@@ -12,6 +12,16 @@
         <!-- Star Rating -->
         <script src="star-rating/jquery.rating.pack.js"></script>
         <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+
+        <style type="text/css">
+            .ui-li-thumb{
+                position:absolute;
+                top:0;
+                bottom:0;
+                padding-left: 10px;
+                margin:auto;
+            }
+        </style>
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -29,13 +39,12 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="Wants_Chanel.html" data-icon="back" class="ui-btn-left">Back</a>
                     <h1>VIEW SELLERS</h1>
                     <a href="ViewSellers_Filter.html" data-icon="eye" class="ui-btn-right">Filter</a>
                 </div>
@@ -43,39 +52,51 @@
 
             <!--Content-->
             <div data-role="content">
-                <ul  data-role="listview" data-inset="true">
+                <ul data-role="listview" data-inset="true">
                     <li><a href="ViewSellers_SellerA.html">
-                            <img src="image/sellers/sellerA.jpg">
-                            <b style="font-size:80%;">Amy Ng</b>
-                            <p><input name="star1" type="radio" class="star" disabled="disabled"/> 
+                            <img src="image/sellers/seller3.png" class="ui-li-thumb" >
+                            <h3 style="font-size:80%;">Justin</h3>
+                            <p>
                                 <input name="star1" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star1" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/></p>
-                            <p style="font-size:80%;">Offer Price: $800</p>
-                            <p style="font-size:80%;">Delivery Time: 1 day</p></a>
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/>
+                            </p>
+                            <p style="font-size:80%;">Coach Swagger 37</p>
+                            <p style="font-size:80%;">Offer at $800</p>
+                            <p style="font-size:80%;">Delivery in 2 weeks</p>
+                        </a>
                     </li>
                     <li><a href="#">
-                            <img src="image/sellers/sellerB.jpg">
-                            <b style="font-size:80%;">Ben Ng</b>
-                            <p><input name="star2" type="radio" class="star" disabled="disabled"/> 
+                            <img src="image/sellers/seller2.png" class="ui-li-thumb" >
+                            <h3 style="font-size:80%;">Amy</h3>
+                            <p>
+                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star2" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star2" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/> 
-                                <input name="star2" type="radio" class="star" disabled="disabled"/></p>
-                            <p style="font-size:80%;">Offer Price: $900</p>
-                            <p style="font-size:80%;">Delivery Time: 1 week</p></a>
+                                <input name="star2" type="radio" class="star" disabled="disabled"/>
+                            </p>
+                            <p style="font-size:80%;">Coach Swagger 37</p>
+                            <p style="font-size:80%;">Offer at $900</p>
+                            <p style="font-size:80%;">Delivery in 3 weeks</p>
+                        </a>
                     </li>
                     <li><a href="#">
-                            <img src="image/sellers/sellerC.jpg">
-                            <b style="font-size:80%;">Clara Ng</b>
-                            <p><input name="star3" type="radio" class="star" disabled="disabled"/> 
+                            <img src="image/sellers/seller4.png" class="ui-li-thumb" >
+                            <h3 style="font-size:80%;">Clara</h3>
+                            <p>
+                                <input name="star3" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
                                 <input name="star3" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star3" type="radio" class="star" disabled="disabled"/></p>
-                            <p style="font-size:80%;">Offer Price: $950</p>
-                            <p style="font-size:80%;">Delivery Time: 1 month</p></a>
+                                <input name="star3" type="radio" class="star" disabled="disabled"/>
+                            </p>
+                            <p style="font-size:80%;">Coach Swagger 37</p>
+                            <p style="font-size:80%;">Offer at $950</p>
+                            <p style="font-size:80%;">Delivery in 4 weeks</p>
+                        </a>
                     </li>
                 </ul>
             </div>
