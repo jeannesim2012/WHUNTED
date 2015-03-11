@@ -8,71 +8,6 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <style type="text/css">
-            /*******[START] CSS for content with responsive images*******/
-            .ui-content {
-                padding: 5px !important; 
-                margin: 0 !important;
-            }
-
-            .puppys { 
-                padding: 0; 
-                margin: 0; 
-                list-style: none;     
-            }
-
-            .puppys li { 
-                float: left; 
-                width: 50%; 
-            }
-
-            .puppys li a { 
-                display: block; 
-                margin: 5px; 
-            }
-
-            .puppys li a img, .show { 
-                display: block; 
-                width: 100%; 
-                height: auto; 
-            }
-
-            /* 0 - 480px */ 
-            @media all and (min-width: 480px){ 	
-                .puppys li { width: 33.33333333%; } 	
-            } 		
-
-            /* 481px - 768px */ 
-            @media only screen and (min-width: 768px) {     
-                .puppys li { width: 20%; } 
-            }  
-
-            /* 769px - 1024px */ 
-            @media only screen and (min-width: 1024px) {     
-                .puppys li { width: 16.66666666%; }  	
-            }  
-
-            /* 1025px - 1280px */ 
-            @media only screen and (min-width: 1280px) {     
-                .puppys li { width: 14.285714%; } 
-            }  
-
-            /* 1281px - 1440 */ 
-            @media only screen and (min-width: 1440px) {     
-                .puppys li { width: 12.5%; } 
-            }  
-
-            /* 1441px - 1600px */ 
-            @media only screen and (min-width: 1600px) {     
-                .puppys li { width: 11.111111%; } 
-            }  
-
-            /* 1601px - 1920px */ 
-            @media only screen and (min-width: 1920px) {     
-                .puppys li { width: 10%; } 
-            } 
-            /*******[END] CSS for content with responsive images*******/
-        </style>
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -96,7 +31,7 @@
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <form method="post" action="Wants_Chanel.html">
+                    <form method="post" action="#">
                         <input type="search" id="search" placeholder="Search for a want" data-mini="true">
                     </form>
                 </div>
@@ -104,64 +39,6 @@
 
             <!--List of content wishes goes here! User can also edit ask price-->
             <div class="ui-grid-a">
-
-                <div data-role="content" id="content" class="ui-grid-a puppys">
-                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a href="#popupChanel" data-rel="popup" data-position-to="window" data-transition="fade"><img src="image/chanel.jpg"  alt="chanel" style="width: 90%;"/>
-                            <br style="font-size:80%;">Chanel
-                            <span class="ui-li-count" style="color: #26A65B; margin-top:-50%">Pending</span>
-                        </a>	
-                    </div>
-                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/celine.jpg" alt="celine" style="width: 90%;"/>
-                            <br style="font-size:80%;">Celine
-                            <span class="ui-li-count" style="color: #26A65B; margin-top:-50%">Pending</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/kanken.jpg" alt="kanken" style="width: 90%;"/>
-                            <br style="font-size:80%;">Fjällräven
-                            <span class="ui-li-count" style="color: #ffd800; margin-top:-50%">Confirmation</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/ysl.jpg" alt="ysl" style="width: 90%;"/>
-                            <br style="font-size:80%;">SaintLaurent
-                            <span class="ui-li-count" style="color: #CF000F; margin-top:-50% ">Completed</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/hermes.jpg" alt="hermes" style="width: 90%;"/>
-                            <br style="font-size:80%;">Hermès
-                            <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/burberry.jpg" alt="burberry" style="width: 90%;"/>
-                            <br style="font-size:80%;">Burberry
-                            <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
-                        </a>
-                    </div>
-
-                    <!--Popups for each images-->
-                    <div data-role="popup" id="popupChanel" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
-                        <div data-role="header" data-theme="a">
-                            <h1>Chanel</h1>
-                        </div>
-                        <div role="main" class="ui-content">
-                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" style="margin-top:1%">Close</a>
-                            <p style="font-size:80%;">#Chanel #Large #Jumbo #Classic #Flep #Bag</p>
-                            <p style="font-size:80%;">Ask Price: $1000</p>
-                            <p style="font-size:80%;">Offered Price: $1000</p>
-                            <center>
-                                <a href="Wants_Edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
-                                <a href="ViewSellers.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/sellers.png"></a>
-                                <a href="Wants_deleted.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/delete.png"></a>
-                            </center>
-                        </div>
-                    </div>
-                </div>
-
                 <!--Bottom navigation bar in the bottom container, Footer-->
                 <div data-role="footer" data-position="fixed">
                     <div data-role="navbar">
@@ -174,24 +51,6 @@
                     </div>
                 </div><!-- /footer -->           
             </div><!-- /page -->
-
-            <!--script for responsive images in the content-->
-            <script>
-                $(document).on('pageinit', '#index', function (e, data) {
-                    $(document).on('click', '.puppys li a', function () {
-                        handler.image = $(this).find('img').attr('src');
-                        $.mobile.changePage("#image", {transition: "slide", changeHash: false});
-                    });
-                });
-
-                $(document).on('pagebeforeshow', '#image', function (e, data) {
-                    $.mobile.activePage.find('.show').attr('src', handler.image)
-                });
-
-                var handler = {
-                    image: ''
-                }
-            </script>
         </div>
     </body>
 </html>
