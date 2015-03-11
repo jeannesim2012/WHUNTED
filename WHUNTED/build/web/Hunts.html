@@ -107,42 +107,20 @@
             <div class="ui-grid-a">
                 <div data-role="content" id="content" class="ui-grid-a puppys">
                     <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a href="#popupChanel" data-rel="popup" data-position-to="window" data-transition="fade"><img src="image/chanel.jpg"  alt="chanel" style="width: 90%;"/>
-                            <br>Chanel
-                            <span class="ui-li-count" style="color: #26A65B; margin-top:-50%">Pending</span>
-                        </a>	
+                        <table width="100%">
+                            <tr>
+                                <td colspan="2">
+                                    <a href="#popupChanel" data-rel="popup" data-position-to="window" data-transition="fade"><img src="image/chanel.jpg"  alt="chanel" style="width: 90%;"/></a>
+                                    <span class="ui-li-count" style="color: #00000; margin-top:-50%">Requested</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="40%"><img src="image/sellers/buyer4.png" style="width:60%;height:50%; float: right"></td>
+                                <td><p style="font-size:80%; text-align: left;"> <b>Chanel</b> </br> $3123 </br> 2 sellers</p></td>
+                            </tr>
+                        </table>
                     </div>
-                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/celine.jpg" alt="celine" style="width: 90%;"/>
-                            <br>Celine
-                            <span class="ui-li-count" style="color: #26A65B; margin-top:-50%">Pending</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/kanken.jpg" alt="kanken" style="width: 90%;"/>
-                            <br>Fjällräven
-                            <span class="ui-li-count" style="color: #ffd800; margin-top:-50%">Confirmation</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/ysl.jpg" alt="ysl" style="width: 90%;"/>
-                            <br>SaintLaurent
-                            <span class="ui-li-count" style="color: #CF000F; margin-top:-50% ">Completed</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/hermes.jpg" alt="hermes" style="width: 90%;"/>
-                            <br>Hermès
-                            <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
-                        </a>
-                    </div>
-                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
-                        <a><img src="image/burberry.jpg" alt="burberry" style="width: 90%;"/>
-                            <br>Burberry
-                            <span class="ui-li-count" style="color: #0066ff; margin-top:-50%">Accepted</span>
-                        </a>
-                    </div>
-
+                    
                     <!--Popups for each images-->
                     <div data-role="popup" id="popupChanel" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
                         <div data-role="header" data-theme="a">
@@ -152,12 +130,12 @@
                             <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" style="margin-top:1%">Close</a>
                             <p>#Chanel #Large #Jumbo #Classic #Flep #Bag</p>
                             <p>Ask Price: $1000</p>
-                            <p>Offered Price: $1000</p>
-                            <ul>
-                                <a href="Edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
-                                <a href="ViewSellers.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/sellers.png"></a>
-                                <a href="Wants_deleted.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/delete.png"></a>
-                            </ul>
+                            <p>Your Offered Price: $950</p>
+                            <p>Lowest Offered Price: $1000</p>
+                            <p>Delivery Date: 31/11/2015</p>
+                            <center>
+                                <a href="Hunt_edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/edit.png"></a>
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -171,7 +149,8 @@
                             <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
                             <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
                     </div>
-                </div><!-- /footer -->           
+                </div><!-- /footer -->        
+                
             </div><!-- /page -->
 
             <!--script for responsive images in the content-->

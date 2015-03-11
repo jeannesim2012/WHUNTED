@@ -43,29 +43,69 @@
 
             <!--Content-->
             <div data-role="content">
-                <center><img src="image/celine.jpg" style="width: 50%;"></center>
-                <form action="server.cgi" method="post" enctype="multipart/form-data">
-                    <!--Enter text fields of image-->
-                    <table cellspacing="4" align="center">
+                <center><img src="image/sellers/buyer4.jpg" style="width: 50%;"></center>
+                <!--Enter text fields of image-->
+                <div data-role="content">
+                    <table cellspacing="4" align="center" width="100%">
                         <tr>
-                            <td><b>Ratings:</b></td>
-                            <td><input name="star3" type="radio" class="star"/> 
-                                <input name="star3" type="radio" class="star"/> 
-                                <input name="star3" type="radio" class="star" checked="checked"/> 
-                                <input name="star3" type="radio" class="star"/> 
-                                <input name="star3" type="radio" class="star"/></td>
+                            <td width="70%"><b style="font-size:80%;">Name:</b></td>
+                            <td width="30%"><p style="font-size:80%;">Danny Ng</p></td>
                         </tr>
                         <tr>
-                            <td><b>Offer Price:</b></td>
-                            <td>$800</td>
+                            <td width="70%"><b style="font-size:80%;">Item:</b></td>
+                            <td width="30%"><p style="font-size:80%;"><img src="image/chanel.jpg" style="width: 80%;"><p></td>
                         </tr>
                         <tr>
-                            <td><b>Delivery Time:</b></td>
-                            <td>1 day</td>
+                            <td width="70%"><b style="font-size:80%;">Ask Price:</b></td>
+                            <td width="30%"><p style="font-size:80%;">$900</p></td>
+                        </tr>
+                        <tr>
+                            <td width="70%"><b style="font-size:80%;">Offer Price:</b></td>
+                            <td width="30%"><p style="font-size:80%;">$800</p></td>
+                        </tr>
+                        <tr>
+                            <td width="70%"><b style="font-size:80%;">Requested Delivery Period:</b></td>
+                            <td width="30%"><p style="font-size:80%;">1 week</p></td>
                         </tr>
                     </table>
-                    <center><a href="Browse_hunt.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/bow1.png"></a></center>
-                </form>
+                </div>
+                <div data-role="content">
+                    <h4>REVIEWS FROM SELLERS</h4>
+                    <ul data-role="listview" data-icon="false">
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/seller2.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;"><i>"Responsible"</i></td>
+                                        <td width="40%">
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a></li>
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/alice.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;"><i>"Prompt payment"</i></td>
+                                        <td width="40%">
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a></li>
+                    </ul>
+                </div>
+
+                <center><a href="Browse_hunt.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/bow1.png"></a></center>
             </div>
 
             <!--Bottom navigation bar in the bottom container, Footer-->

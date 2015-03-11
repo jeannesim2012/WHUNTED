@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- Star Rating -->
+        <script src="star-rating/jquery.rating.pack.js"></script>
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -25,28 +30,49 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="Wants.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>EDIT</h1>
+                    <a href="Browse.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>Review Seller</h1>
                 </div>
             </div>
+
             <!--Content-->
             <div data-role="content">
-                
-                <center><img src="image/chanel.jpg" style="width: 50%;"></center>
+                <center><img src="image/sellers/sellerA.jpg" style="width: 50%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
-                    <b style="font-size:80%;">Item Name: </b><input type="text" name="itemName" data-mini="true" value="Chanel">
-                    <b style="font-size:80%;">Ask Price ($): </b><input type="number" name="price" data-mini="true" value="1000">
-                    <b style="font-size:80%;">Hashtags: </b><input type="text" name="hashtag" data-mini="true" value="#Chanel #Large #Jumbo #Classic #Flep #Bag">
-                    <!--Need to fix the submit buttons!-->
-                    <a href="Wants_updated.html" class="ui-btn ui-btn-w ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">UPDATE</a>
+                    <table cellspacing="4" align="center">
+                        <tr>
+                            <td><b style="font-size:80%;">Ratings:</b></td>
+                            <td><input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star" checked="checked"/> 
+                                <input name="star3" type="radio" class="star"/> 
+                                <input name="star3" type="radio" class="star"/></td>
+                        </tr>
+                        <tr>
+                            <td><b style="font-size:80%;">Review:</b></td>
+                            <td><div data-role="fieldcontain">
+                                    <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+                                </div></td>
+                        </tr>
+                    </table>
                 </form>
+            </div>
+
+            <!--Popups for each images-->
+            <div data-role="popup" id="popupHunted" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+                <div role="main" class="ui-content">
+                    <center><p>Review Updated</p></center>
+                    <center>
+                        <a href="ViewSellers_SellerA_Reviewed.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
+                    </center>
+                </div>
             </div>
 
             <!--Bottom navigation bar in the bottom container, Footer-->

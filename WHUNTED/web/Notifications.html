@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+        <!-- Star Rating -->
+        <script src="star-rating/jquery.rating.pack.js"></script>
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -25,30 +29,49 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
+                
                 <div data-role="header">
-                    <a href="Wants.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>EDIT</h1>
+                    <a href="ViewSellers.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>NOTIFICATIONS</h1>
                 </div>
             </div>
-            <!--Content-->
+            <!--Content: FOR CODES-->
             <div data-role="content">
-                
-                <center><img src="image/chanel.jpg" style="width: 50%;"></center>
-                <form action="server.cgi" method="post" enctype="multipart/form-data">
-                    <!--Enter text fields of image-->
-                    <b style="font-size:80%;">Item Name: </b><input type="text" name="itemName" data-mini="true" value="Chanel">
-                    <b style="font-size:80%;">Ask Price ($): </b><input type="number" name="price" data-mini="true" value="1000">
-                    <b style="font-size:80%;">Hashtags: </b><input type="text" name="hashtag" data-mini="true" value="#Chanel #Large #Jumbo #Classic #Flep #Bag">
-                    <!--Need to fix the submit buttons!-->
-                    <a href="Wants_updated.html" class="ui-btn ui-btn-w ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">UPDATE</a>
-                </form>
+                <ul data-role="listview" data-icon="false">
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/seller2.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;">Chanel</td>
+                                        <td width="40%" style="font-size:80%;">$800 <br> 1 day</td>
+                                    </tr>
+                                </table>
+                            </a></li>
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/seller3.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;">Chanel</td>
+                                        <td width="40%" style="font-size:80%;">$900 <br> 1 week</td>
+                                    </tr>
+                                </table>
+                            </a></li>
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/seller4.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;">Chanel</td>
+                                        <td width="40%" style="font-size:80%;">$950 <br> 1 month</td>
+                                    </tr>
+                                </table>
+                            </a></li>
+                    </ul>
             </div>
-
             <!--Bottom navigation bar in the bottom container, Footer-->
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
@@ -56,7 +79,7 @@
                         <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
                         <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/chat.png"></a></li>
                         <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
-                        <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                        <li><a href="Notifications.html" style="font-size: 60%" class="ui-btn-active"><img src="image/icon/bell.png"></a></li>
                     </ul>
                 </div>
             </div><!-- /footer -->

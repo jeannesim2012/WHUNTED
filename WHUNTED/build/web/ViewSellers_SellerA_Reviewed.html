@@ -12,6 +12,7 @@
         <!-- Star Rating -->
         <script src="star-rating/jquery.rating.pack.js"></script>
         <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -29,55 +30,37 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <a href="Wants_Chanel.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>VIEW SELLERS</h1>
-                    <a href="ViewSellers_Filter.html" data-icon="eye" class="ui-btn-right">Filter</a>
+                    <a href="ViewSellers.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>Amy Ng</h1>
                 </div>
             </div>
 
             <!--Content-->
             <div data-role="content">
-                <ul  data-role="listview" data-inset="true">
-                    <li><a href="ViewSellers_SellerA.html">
-                            <img src="image/sellers/sellerA.jpg">
-                            <b style="font-size:80%;">Amy Ng</b>
-                            <p><input name="star1" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/></p>
-                            <p style="font-size:80%;">Offer Price: $800</p>
-                            <p style="font-size:80%;">Delivery Time: 1 day</p></a>
-                    </li>
-                    <li><a href="#">
-                            <img src="image/sellers/sellerB.jpg">
-                            <b style="font-size:80%;">Ben Ng</b>
-                            <p><input name="star2" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/> 
-                                <input name="star2" type="radio" class="star" disabled="disabled"/></p>
-                            <p style="font-size:80%;">Offer Price: $900</p>
-                            <p style="font-size:80%;">Delivery Time: 1 week</p></a>
-                    </li>
-                    <li><a href="#">
-                            <img src="image/sellers/sellerC.jpg">
-                            <b style="font-size:80%;">Clara Ng</b>
-                            <p><input name="star3" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                <center><img src="image/sellers/sellerA.jpg" style="width: 50%;"></center>
+                <form action="server.cgi" method="post" enctype="multipart/form-data">
+                    <!--Enter text fields of image-->
+                    <table cellspacing="4" align="center">
+                        <tr>
+                            <td><b style="font-size:80%;">Ratings:</b></td>
+                            <td><input name="star3" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star3" type="radio" class="star" disabled="disabled"/> 
                                 <input name="star3" type="radio" class="star" disabled="disabled"/> 
-                                <input name="star3" type="radio" class="star" disabled="disabled"/></p>
-                            <p style="font-size:80%;">Offer Price: $950</p>
-                            <p style="font-size:80%;">Delivery Time: 1 month</p></a>
-                    </li>
-                </ul>
+                                <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star3" type="radio" class="star" disabled="disabled" checked="checked" checked="checked"/></td>
+                        </tr>
+                        <tr>
+                            <td><b style="font-size:80%;">Review:</b></td>
+                            <td><p style="font-size:80%;">Replies to enquiries promptly and delivers goods of expected quality.</p></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
 
             <!--Bottom navigation bar in the bottom container, Footer-->

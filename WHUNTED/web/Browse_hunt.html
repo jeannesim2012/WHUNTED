@@ -37,7 +37,7 @@
                 </div><!-- /navbar -->
                 <div data-role="header">
                     <a href="Browse.html" data-icon="back" class="ui-btn-left">Back</a>
-                    <h1>View Buyer</h1>
+                    <h1>Place Hunt</h1>
                 </div>
             </div>
 
@@ -46,26 +46,22 @@
                 <center><img src="image/celine.jpg" style="width: 50%;"></center>
                 <form action="server.cgi" method="post" enctype="multipart/form-data">
                     <!--Enter text fields of image-->
-                    <table cellspacing="4" align="center">
-                        <tr>
-                            <td><b>Ratings:</b></td>
-                            <td><input name="star3" type="radio" class="star"/> 
-                                <input name="star3" type="radio" class="star"/> 
-                                <input name="star3" type="radio" class="star" checked="checked"/> 
-                                <input name="star3" type="radio" class="star"/> 
-                                <input name="star3" type="radio" class="star"/></td>
-                        </tr>
-                        <tr>
-                            <td><b>Offer Price:</b></td>
-                            <td>$800</td>
-                        </tr>
-                        <tr>
-                            <td><b>Delivery Time:</b></td>
-                            <td>1 day</td>
-                        </tr>
-                    </table>
-                    <center><a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/mail.png"></a></center>
+                    <b style="font-size:80%;">Offered Price ($): </b><input type="number" name="price" data-mini="true">
+                    <br>
+                    <b style="font-size:80%;">Delivery Date:  </b><input type="date" name="hashtag" data-mini="true">
+                    <!--Need to fix the submit buttons!-->
+                    <center><a href="#popupHunted" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a></center>
                 </form>
+            </div>
+            
+            <!--Popups for each images-->
+            <div data-role="popup" id="popupHunted" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+                <div role="main" class="ui-content">
+                    <p><center>Hunt Requested</center></p>
+                    <center>
+                        <a href="Browse.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
+                    </center>
+                </div>
             </div>
 
             <!--Bottom navigation bar in the bottom container, Footer-->
