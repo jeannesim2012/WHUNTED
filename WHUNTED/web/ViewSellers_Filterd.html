@@ -13,7 +13,7 @@
         <script src="star-rating/jquery.rating.pack.js"></script>
         <link rel="stylesheet" href="star-rating/jquery.rating.css" />
 
-        <style>
+        <style type="text/css">
             .ui-li-thumb{
                 position:absolute;
                 top:0;
@@ -22,7 +22,6 @@
                 margin:auto;
             }
         </style>
-
     </head>
     <body>
         <div data-role="page" data-theme="a">
@@ -40,52 +39,51 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <h1>Justin</h1>
+                    <h1>VIEW SELLERS</h1>
+                    <a href="ViewSellers_Filter.html" data-icon="eye" class="ui-btn-right">Filter</a>
                 </div>
             </div>
 
             <!--Content-->
             <div data-role="content">
-                <center><img src="image/sellers/sellerB.jpg" style="width: 50%;"></center>
-                <!--Enter text fields of image-->
-                <table cellspacing="4" align="center">
-                    <tr>
-                        <td><b style="font-size:80%;">Ratings:</b></td>
-                        <td><input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/></td>
-                    </tr>
-                </table>
-
-                <div data-role="content">
-                    <h4>REVIEWS FROM BUYERS</h4>
-                    <ul data-role="listview" data-inset="true">
-                        <li>
-                            <img src="image/sellers/alice.png" class="ui-li-thumb" >
-                            <p style="font-size:80%;"><i>"Trustworthy"</i></p>
-                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/>
-                        </li>
-                    </ul>
-                </div>
-                
-                <center>
-                    <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/handshake.png"></a>
-                    <a href="ViewSellers.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/sellers.png"></a>
-                    <a href="Review.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/rate.png"></a>
-                </center>
-
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="ViewSellers_SellerA.html">
+                            <img src="image/sellers/seller3.png" class="ui-li-thumb" >
+                            <h3 style="font-size:80%;">Justin</h3>
+                            <p>
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/>
+                            </p>
+                            <p style="font-size:80%;">Coach Swagger 37</p>
+                            <p style="font-size:80%;">Offer at $800</p>
+                            <p style="font-size:80%;">Delivery in 2 weeks</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="image/sellers/seller2.png" class="ui-li-thumb" >
+                            <h3 style="font-size:80%;">Amy</h3>
+                            <p>
+                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                                <input name="star2" type="radio" class="star" disabled="disabled"/>
+                            </p>
+                            <p style="font-size:80%;">Coach Swagger 37</p>
+                            <p style="font-size:80%;">Offer at $900</p>
+                            <p style="font-size:80%;">Delivery in 3 weeks</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <!--Bottom navigation bar in the bottom container, Footer-->
