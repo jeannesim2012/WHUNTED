@@ -5,9 +5,87 @@
         <title>WHUNTED</title>
         <link rel="stylesheet" href="themes/whunt.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <link rel='stylesheet' type='text/css' href='chat.css' />
+        <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+        <style type="text/css">
+            /*******[START] CSS for content with responsive images*******/
+            .ui-content {
+                padding: 5px !important; 
+                margin: 0 !important;
+            }
+
+            .puppys { 
+                padding: 0; 
+                margin: 0; 
+                list-style: none;     
+            }
+
+            .puppys li { 
+                float: left; 
+                width: 50%; 
+            }
+
+            .puppys li a { 
+                display: block; 
+                margin: 5px; 
+            }
+
+            .puppys li a img, .show { 
+                display: block; 
+                width: 100%; 
+                height: auto; 
+            }
+
+            /* 0 - 480px */ 
+            @media all and (min-width: 480px){ 	
+                .puppys li { width: 33.33333333%; } 	
+            } 		
+
+            /* 481px - 768px */ 
+            @media only screen and (min-width: 768px) {     
+                .puppys li { width: 20%; } 
+            }  
+
+            /* 769px - 1024px */ 
+            @media only screen and (min-width: 1024px) {     
+                .puppys li { width: 16.66666666%; }  	
+            }  
+
+            /* 1025px - 1280px */ 
+            @media only screen and (min-width: 1280px) {     
+                .puppys li { width: 14.285714%; } 
+            }  
+
+            /* 1281px - 1440 */ 
+            @media only screen and (min-width: 1440px) {     
+                .puppys li { width: 12.5%; } 
+            }  
+
+            /* 1441px - 1600px */ 
+            @media only screen and (min-width: 1600px) {     
+                .puppys li { width: 11.111111%; } 
+            }  
+
+            /* 1601px - 1920px */ 
+            @media only screen and (min-width: 1920px) {     
+                .puppys li { width: 10%; } 
+            } 
+            /*******[END] CSS for content with responsive images*******/
+
+            .ui-li-thumb{
+                position:absolute;
+                top:0;
+                bottom:0;
+                padding-left: 10px;
+                margin:auto;
+            }
+        </style>
 
     </head>
     <body>
@@ -29,7 +107,7 @@
                 <input type="text" id="account" name="price" data-mini="true" placeholder="Account">
                 <input type="password" id="password" name="hashtag" data-mini="true" placeholder="Password">
 
-                <a id="login" href="Wants.html" class="ui-btn ui-icon-check ui-btn-icon-left" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">LOGIN</a>
+                <a id="login" href="Wants.html" class="ui-btn ui-icon-check ui-btn-icon-left"  rel="external" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">LOGIN</a>
             </div>
         </div><!-- /page -->
     </body>
