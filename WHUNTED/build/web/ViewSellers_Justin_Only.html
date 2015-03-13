@@ -4,13 +4,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>WHUNTED</title>
         <!--DONE-->
-        <link rel="stylesheet" href="themes/whunt.min.css" />
+
+
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="themes/whunt.min.css" />
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="star-rating/jquery.rating.js"></script>
+
+        <style type="text/css">
+            .ui-li-thumb{
+                position:absolute;
+                top:0;
+                bottom:0;
+                padding-left: 10px;
+                margin:auto;
+            }
+        </style>
     </head>
     <body>
+
         <div data-role="page" data-theme="a">
             <!--Navigation bar in the top container, Header is in RED-->
             <div data-role="header" data-position="fixed">
@@ -32,34 +48,50 @@
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <h1>UPLOAD</h1>
+                    <h1>VIEW SELLERS</h1>
+                    <a href="ViewSellers_Filter.html" data-icon="eye" class="ui-btn-right">Filter</a>
                 </div>
             </div>
+
             <!--Content-->
             <div data-role="content">
-                <form action="Wants_page2.html" method="post" enctype="multipart/form-data">
-                    <!--Upload using camera-->
-                    <b style="font-size:80%;">Image: </b><input type="file" name="image" accept="image/*" data-mini="true" />
-                    <!--Enter text fields of image-->
-                    <b style="font-size:80%;">Item Name: </b><input type="text" name="itemName" data-mini="true">
-                    <b style="font-size:80%;">Ask Price ($): </b><input type="number" name="price" data-mini="true">
-                    <b style="font-size:80%;">Hashtags: </b><input type="text" name="hashtag" data-mini="true">
-                    <!--Need to fix the submit buttons!-->
-                    <a href="Wants_page2.html" rel="external" class="ui-btn ui-btn-w ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">SUBMIT</a>
-                </form>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="ViewSellers_SellerA.html">
+                            <img src="image/sellers/seller3.png" class="ui-li-thumb" >
+                            <h3 style="font-size:80%;">Justin - Accepted Seller</h3>
+                            <p>
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/>
+                            </p>
+                            <p style="font-size:80%;">Coach Swagger 37</p>
+                            <p style="font-size:80%;">Offer at $800</p>
+                            <p style="font-size:80%;">Delivery in 2 weeks</p>
+                        </a>
+                    </li>
+
+                </ul>
             </div>
+
 
             <!--Bottom navigation bar in the bottom container, Footer-->
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" style="font-size: 60%"  class="ui-btn-active"><img src="image/icon/camera.png"></a></li>
+                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
                         <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
                         <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
-                            <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                        <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
                     </ul>
                 </div>
             </div><!-- /footer -->
+
+            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <script src="star-rating/jquery.rating.js"></script>
         </div><!-- /page -->
+
     </body>
 </html>

@@ -26,37 +26,49 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="Wants.html">WANTS</a></li>
+                        <li><a href="Wants.html" class="ui-btn-active">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <h1>UPLOAD</h1>
+                    <a href="Wants_page2.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>VIEW ITEM</h1>
                 </div>
             </div>
             <!--Content-->
             <div data-role="content">
-                <form action="Wants_page2.html" method="post" enctype="multipart/form-data">
-                    <!--Upload using camera-->
-                    <b style="font-size:80%;">Image: </b><input type="file" name="image" accept="image/*" data-mini="true" />
-                    <!--Enter text fields of image-->
-                    <b style="font-size:80%;">Item Name: </b><input type="text" name="itemName" data-mini="true">
-                    <b style="font-size:80%;">Ask Price ($): </b><input type="number" name="price" data-mini="true">
-                    <b style="font-size:80%;">Hashtags: </b><input type="text" name="hashtag" data-mini="true">
-                    <!--Need to fix the submit buttons!-->
-                    <a href="Wants_page2.html" rel="external" class="ui-btn ui-btn-w ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" style="background-color: #26A65B; color: white; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;">SUBMIT</a>
-                </form>
+
+                <center><img src="image/coach.PNG" style="width: 50%;"></center>
+                <table cellspacing="4" align="center">
+                    <tr>
+                        <td><b style="font-size:80%;">Item Name:</b></td>
+                        <td><p style="font-size:80%;">Coach Swagger 37 Carryall </p></td>
+                    </tr>
+                    <tr>
+                        <td><b style="font-size:80%;">Ask Price ($):</b></td>
+                        <td><p style="font-size:80%;">$800</p></td>
+                    </tr>
+                    <tr>
+                        <td><b style="font-size:80%;">Hashtags:</b></td>
+                        <td><p style="font-size:80%;">#Coach #Bag</p></td>
+                    </tr>
+                </table>
+                <center>
+                    <a href="Wants_Edit.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" ><img src="image/icon/edit.png"></a>
+                    <a href="ViewSellers_Justin_Only.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" rel="external"><img src="image/icon/sellers.png"></a>
+                    <a href="Wants.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/delete.png"></a>
+                </center>
             </div>
 
             <!--Bottom navigation bar in the bottom container, Footer-->
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" style="font-size: 60%"  class="ui-btn-active"><img src="image/icon/camera.png"></a></li>
-                        <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
+                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
+                        <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/envelope.png"></a></li>
                         <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
-                            <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                        <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
                     </ul>
                 </div>
             </div><!-- /footer -->
