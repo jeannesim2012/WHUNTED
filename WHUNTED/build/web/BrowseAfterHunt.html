@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WHUNTED</title>
+        <link rel="stylesheet" href="themes/whunt.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="themes/listview-grid.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <style type="text/css">
+            /*******[START] CSS for content with responsive images*******/
+            .ui-content {
+                padding: 5px !important; 
+                margin: 0 !important;
+            }
+
+            .puppys { 
+                padding: 0; 
+                margin: 0; 
+                list-style: none;     
+            }
+
+            .puppys li { 
+                float: left; 
+                width: 50%; 
+            }
+
+            .puppys li a { 
+                display: block; 
+                margin: 5px; 
+            }
+
+            .puppys li a img, .show { 
+                display: block; 
+                width: 100%; 
+                height: auto; 
+            }
+
+            /* 0 - 480px */ 
+            @media all and (min-width: 480px){ 	
+                .puppys li { width: 33.33333333%; } 	
+            } 		
+
+            /* 481px - 768px */ 
+            @media only screen and (min-width: 768px) {     
+                .puppys li { width: 20%; } 
+            }  
+
+            /* 769px - 1024px */ 
+            @media only screen and (min-width: 1024px) {     
+                .puppys li { width: 16.66666666%; }  	
+            }  
+
+            /* 1025px - 1280px */ 
+            @media only screen and (min-width: 1280px) {     
+                .puppys li { width: 14.285714%; } 
+            }  
+
+            /* 1281px - 1440 */ 
+            @media only screen and (min-width: 1440px) {     
+                .puppys li { width: 12.5%; } 
+            }  
+
+            /* 1441px - 1600px */ 
+            @media only screen and (min-width: 1600px) {     
+                .puppys li { width: 11.111111%; } 
+            }  
+
+            /* 1601px - 1920px */ 
+            @media only screen and (min-width: 1920px) {     
+                .puppys li { width: 10%; } 
+            } 
+            /*******[END] CSS for content with responsive images*******/
+        </style>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
+            <!--Navigation bar in the top container, Header is in RED-->
+            <div data-role="header" data-position="fixed">
+                <!--Logo of Whunted is here-->
+                <div data-role="header" style="background-color: #E74C3C">
+                    <table cellspacing="4" align="center" width="100%">
+                        <tr>
+                            <td width="90%" align="center" style="padding-left: 10%;"><img src="image/logo/whunted_white.png"></td>
+                            <td width="10%"><a href="Login.html"><img src="image/icon/logout_v2.png"></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--Main Navigation Bar-->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Wants.html">WANTS</a></li>
+                        <li><a href="Hunts.html">HUNTS</a></li>
+                        <li><a href="#" class="ui-btn-active">BROWSE</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                <div data-role="header" class="ui-grid-a">
+                    <form method="post" action="Wants_Chanel.html">
+                        <input type="search" id="search" placeholder="Search for a want" data-mini="true">
+                    </form>
+                </div>
+            </div><!-- /header -->
+
+            <!--List of content wishes goes here! User can also edit ask price-->
+            <div class="ui-grid-a">
+                <div data-role="content" id="content" class="ui-grid-a puppys">
+                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
+                        <table width="100%">
+                            <tr>
+                                <td colspan="2">
+                                    <a href="#popupChanel" data-rel="popup" data-position-to="window" data-transition="fade"><img src="image/chanel.jpg"  alt="chanel" style="width: 90%;"/></a>
+                                    <span class="ui-li-count" style="color: #00000; margin-top:-50%">2 weeks ago</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="40%"><img src="image/sellers/buyer4.png" style="width:60%;height:50%; float: right"></td>
+                                <td><p style="font-size:80%; text-align: left;"> <b>Chanel</b> </br> $3123 </br> 3 sellers</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
+                        <table width="100%">
+                            <tr>
+                                <td colspan="2">
+                                    <a href="#popupChanel" data-rel="popup" data-position-to="window" data-transition="fade"><img src="image/celine.jpg"  alt="chanel" style="width: 90%;"/></a>
+                                    <span class="ui-li-count" style="color: #00000; margin-top:-50%">7 weeks ago</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="40%"><img src="image/sellers/buyer1.png" style="width:60%;height:50%; float: right"></td>
+                                <td><p style="font-size:80%; text-align: left;"> <b>Celine</b> </br> $1588 </br> 0 sellers</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div data-role="button" class="ui-block-a ui-btn ui-corner-all ui-shadow">
+                        <table width="100%">
+                            <tr>
+                                <td colspan="2">
+                                    <a href="#popupChanel" data-rel="popup" data-position-to="window" data-transition="fade"><img src="image/kanken.jpg"  alt="chanel" style="width: 90%;"/></a>
+                                    <span class="ui-li-count" style="color: #00000; margin-top:-50%">8 weeks ago</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="40%"><img src="image/sellers/buyer2.png" style="width:60%;height:50%; float: right"></td>
+                                <td><p style="font-size:80%; text-align: left;"> <b>Fjällräven</b> </br> $1588 </br> 1 sellers</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div data-role="button" class="ui-block-b ui-btn ui-corner-all ui-shadow">
+                        <table width="100%">
+                            <tr>
+                                <td colspan="2">
+                                    <img src="image/ysl.jpg"  alt="chanel" style="width: 90%;"/>
+                                    <span class="ui-li-count" style="color: #00000; margin-top:-50%">10 weeks ago</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="40%"><img src="image/sellers/buyer2.png" style="width:60%;height:50%; float: right"></td>
+                                <td><p style="font-size:80%; text-align: left;"> <b>SaintLaurent</b> </br> $1588 </br> 1 sellers</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <!--Popups for each images-->
+                    <div data-role="popup" id="popupChanel" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+                        <div data-role="header" data-theme="a">
+                            <h1>Chanel</h1>
+                        </div>
+                        <div role="main" class="ui-content">
+                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" style="margin-top:1%">Close</a>
+                            <p>#Chanel #Large #Jumbo #Classic #Flep #Bag</p>
+                            <p>Ask Price: $1000</p>
+                            <p>Lowest Offered Price: $1000</p>
+                            <center>
+                                <a href="Browse_buyer.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/buyer.png"></a>
+                                <a href="Browse_hunt.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/bow1.png"></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Bottom navigation bar in the bottom container, Footer-->
+                <div data-role="footer" data-position="fixed">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
+                            <li><a href="Chat.html" style="font-size: 60%"><img src="image/icon/chat.png"></a></li>
+                            <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
+                            <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                        </ul>
+                    </div>
+                </div><!-- /footer -->           
+            </div><!-- /page -->
+
+            <!--script for responsive images in the content-->
+            <script>
+                $(document).on('pageinit', '#index', function (e, data) {
+                    $(document).on('click', '.puppys li a', function () {
+                        handler.image = $(this).find('img').attr('src');
+                        $.mobile.changePage("#image", {transition: "slide", changeHash: false});
+                    });
+                });
+
+                $(document).on('pagebeforeshow', '#image', function (e, data) {
+                    $.mobile.activePage.find('.show').attr('src', handler.image)
+                });
+
+                var handler = {
+                    image: ''
+                }
+            </script>
+        </div>
+    </body>
+</html>
