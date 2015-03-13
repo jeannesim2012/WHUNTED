@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WHUNTED</title>
+        <link rel="stylesheet" href="themes/whunt.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- Star Rating -->
+        <script src="star-rating/jquery.rating.js"></script>
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
+
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
+            <!--Navigation bar in the top container, Header is in RED-->
+            <div data-role="header" data-position="fixed">
+                <!--Logo of Whunted is here-->
+                <div data-role="header" style="background-color: #E74C3C">
+                    <table cellspacing="4" align="center" width="100%">
+                        <tr>
+                            <td width="90%" align="center" style="padding-left: 10%;"><img src="image/logo/whunted_white.png"></td>
+                            <td width="10%"><a href="Login.html"><img src="image/icon/logout_v2.png"></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--Main Navigation Bar-->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Wants.html">WANTS</a></li>
+                        <li><a href="Hunts_completed.html">HUNTS</a></li>
+                        <li><a href="Browse.html" class="ui-btn-active">BROWSE</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                <div data-role="header">
+                    <a href="Browse.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>View Buyer</h1>
+                </div>
+            </div>
+
+            <!--Content-->
+            <div data-role="content">
+                <center><img src="image/sellers/buyer4.jpg" style="width: 50%;"></center>
+                <!--Enter text fields of image-->
+                <div data-role="content">
+                    <table cellspacing="4" align="center" width="100%">
+                        <tr>
+                            <td width="70%"><b style="font-size:80%;">Name:</b></td>
+                            <td width="30%"><p style="font-size:80%;">Danny Ng</p></td>
+                        </tr>
+                        <tr>
+                            <td width="70%"><b style="font-size:80%;">Item:</b></td>
+                            <td width="30%"><p style="font-size:80%;"><img src="image/chanel.jpg" style="width: 80%;"><p></td>
+                        </tr>
+                        <tr>
+                            <td width="70%"><b style="font-size:80%;">Ask Price:</b></td>
+                            <td width="30%"><p style="font-size:80%;">$900</p></td>
+                        </tr>
+                        <tr>
+                            <td width="70%"><b style="font-size:80%;">Offer Price:</b></td>
+                            <td width="30%"><p style="font-size:80%;">$820</p></td>
+                        </tr>
+                        <tr>
+                            <td width="70%"><b style="font-size:80%;">Requested Delivery Period:</b></td>
+                            <td width="30%"><p style="font-size:80%;">1 week</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div data-role="content">
+                    <h4>REVIEWS FROM SELLERS</h4>
+                    <ul data-role="listview" data-icon="false">
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/seller2.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;"><i>"Responsible"</i></td>
+                                        <td width="40%">
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                                            <input name="star3" type="radio" class="star" disabled="disabled"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a></li>
+
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/alice.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;"><i>"Prompt payment"</i></td>
+                                        <td width="40%">
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a></li>
+
+
+                        <li><a>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="20%"><img src="image/sellers/bob.png" style="width: 75%; height: 50%"></td>
+                                        <td width="40%" style="font-size:80%;"><i>"Hard to deal with"</i></td>
+                                        <td width="40%">
+                                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/> 
+                                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
+                                            <input name="star1" type="radio" class="star" disabled="disabled"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a></li>
+
+                    </ul>
+                </div>
+                <center>
+                    <a href="#popupRequest" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/chat_button.png" style="width: 90%;"/></a>
+                    <a href="Review_Buyer.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/rate.png"></a>
+                </center>
+            </div>
+
+            <!--Popups for each images-->
+            <div data-role="popup" id="popupRequest" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header" data-theme="a">
+                    <h1>Coach Swagger</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <p>Chat with Danny?</p>
+                    <center>
+                        <a href="Chat_Buyer.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/close.png"></a>
+                    </center>
+                </div>
+            </div>
+
+            <!--Bottom navigation bar in the bottom container, Footer-->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
+                        <li><a href="Chat.html" style="font-size: 60%" rel="external"><img src="image/icon/chat.png"></a></li>
+                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
+                        <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                    </ul>
+                </div>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+    </body>
+</html>

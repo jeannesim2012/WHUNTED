@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WHUNTED</title>
+        <link rel="stylesheet" href="themes/whunt.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- For Chat -->
+        <link rel='stylesheet' type='text/css' href='chat.css' />
+        <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+        <!--
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+        -->
+    </head>
+    <body>
+        <div data-role="page" data-theme="a" id="chat_page">
+            <!--Navigation bar in the top container, Header is in RED-->
+            <div data-role="header" data-position="fixed">
+                <!--Logo of Whunted is here-->
+                <div data-role="header" style="background-color: #E74C3C">
+                    <table cellspacing="4" align="center" width="100%">
+                        <tr>
+                            <td width="90%" align="center" style="padding-left: 10%;"><img src="image/logo/whunted_white.png"></td>
+                            <td width="10%"><a href="Login.html"><img src="image/icon/logout_v2.png"></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--Main Navigation Bar-->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="NEW_WANT.html">WANTS</a></li>
+                        <li><a href="New_Hunts.html">HUNTS</a></li>
+                        <li><a href="Browse.html">BROWSE</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+
+                <div data-role="header">
+                    <a href="ViewSellers.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>CHAT</h1>
+                </div>
+            </div>
+            <!--Content: FOR CODES-->
+            <div data-role="content">
+
+                <center><h3>Danny Ng</h3></center>
+                <br>
+                <div id='content'>
+<!--                    <img src='image/sellers/seller3.png' alt=''>
+                    <p>Shall we meet at Woodlands MRT at 11am?</p>-->
+                </div>
+
+                <div id='message'>
+                    <textarea rows='2' cols='34'>Shall we meet at Novena MRT?</textarea>
+                    <button id="chat_button">post</button>
+                </div>
+            </div>
+            <!--Bottom navigation bar in the bottom container, Footer-->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Upload.html" style="font-size: 60%"><img src="image/icon/camera.png"></a></li>
+                        <li><a href="#" style="font-size: 60%" class="ui-btn-active"><img src="image/icon/chat.png"></a></li>
+                        <li><a href="Profile.html" style="font-size: 60%"><img src="image/icon/profile.png"></a></li>
+                        <li><a href="Notifications.html" style="font-size: 60%"><img src="image/icon/bell.png"></a></li>
+                    </ul>
+                </div>
+            </div><!-- /footer -->
+
+            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <script type="text/javascript">
+                $(document).on("pageinit", function (event, ui) {
+                    $('button').click(function () {
+                        var message = $('textarea').val();
+                        var old = $('#content').html();
+                        $('#content').html(old + "<img src='image/sellers/seller3.png' alt='' style='float: right'>"
+                                + "<p style='float: right; background: #99CCFF;'>" + message + '</p>');
+                        var timer = setInterval(function () {
+                            old = $('#content').html();
+                            $('#content').html(old + "<img src='image/sellers/seller3.png' alt='' style='float: left'>"
+                                    + "<p style='float: left'>" + 'Sure. How abt 11am?' + '</p>');
+                            clearInterval(timer);
+                        }, 3000);
+                    });
+                });
+            </script>
+        </div><!-- /page -->
+    </body>
+</html>

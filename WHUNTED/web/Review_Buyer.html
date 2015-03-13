@@ -3,27 +3,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>WHUNTED</title>
-
         <link rel="stylesheet" href="themes/whunt.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
         <!-- Star Rating -->
-        <script src="star-rating/jquery.rating.js"></script>
-
-
-        <style>
-            .ui-li-thumb{
-                position:absolute;
-                top:0;
-                bottom:0;
-                padding-left: 10px;
-                margin:auto;
-            }
-        </style>
+        <script src="star-rating/jquery.rating.pack.js"></script>
+        <link rel="stylesheet" href="star-rating/jquery.rating.css" />
 
     </head>
     <body>
@@ -42,50 +30,39 @@
                 <!--Main Navigation Bar-->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" class="ui-btn-active">WANTS</a></li>
+                        <li><a href="Wants.html">WANTS</a></li>
                         <li><a href="Hunts.html">HUNTS</a></li>
                         <li><a href="Browse.html">BROWSE</a></li>
                     </ul>
                 </div><!-- /navbar -->
                 <div data-role="header">
-                    <h1>Justin</h1>
+                    <a href="Browse.html" data-icon="back" class="ui-btn-left">Back</a>
+                    <h1>Review Seller</h1>
                 </div>
             </div>
 
             <!--Content-->
             <div data-role="content">
-                <center><img src="image/sellers/sellerB.jpg" style="width: 50%;"></center>
+                <center><img src="image/sellers/buyer4.jpg" style="width: 50%;"></center>
                 <!--Enter text fields of image-->
                 <table cellspacing="4" align="center">
                     <tr>
                         <td><b style="font-size:80%;">Ratings:</b></td>
-                        <td>
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled"/> 
-                            <input name="star1" type="radio" class="star" disabled="disabled" checked="checked"/>
-                        </td>
+                        <td><input name="star3" type="radio" class="star"/> 
+                            <input name="star3" type="radio" class="star"/> 
+                            <input name="star3" type="radio" class="star" checked="checked"/> 
+                            <input name="star3" type="radio" class="star"/> 
+                            <input name="star3" type="radio" class="star"/></td>
+                    </tr>
+                    <tr>
+                        <td><b style="font-size:80%;">Review:</b></td>
+                        <td><div data-role="fieldcontain">
+                                <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+                            </div></td>
                     </tr>
                 </table>
-
-                <h4>REVIEWS FROM BUYERS</h4>
-                <ul data-role="listview" data-inset="true">
-                    <li>
-                        <img src="image/sellers/alice.png" class="ui-li-thumb" >
-                        <p style="font-size:80%;"><i>"Trustworthy"</i></p>
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled"/> 
-                        <input name="star2" type="radio" class="star" disabled="disabled" checked="checked"/>
-                    </li>
-                </ul>
-
                 <center>
-                    <a href="Chat.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" rel="external"><img src="image/icon/handshake.png"></a>
-                    <a href="ViewSellers.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/sellers.png"></a>
-                    <a href="Review.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/rate.png"></a>
+                    <a href="Browse_buyer_reviewed.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"><img src="image/icon/tick.png"></a>
                 </center>
 
             </div>
@@ -101,11 +78,10 @@
                     </ul>
                 </div>
             </div><!-- /footer -->
-
+            
             <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-            <script src="star-rating/jquery.rating.js"></script>
-
+            <script src="star-rating/jquery.rating.pack.js"></script>
         </div><!-- /page -->
     </body>
 </html>
